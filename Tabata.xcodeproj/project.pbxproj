@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC7C88801C8F646000E6422A /* GeneralObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C887E1C8F646000E6422A /* GeneralObserver.swift */; };
+		AC7C88811C8F646000E6422A /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C887F1C8F646000E6422A /* Observer.swift */; };
+		AC7C88871C8F646B00E6422A /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88821C8F646B00E6422A /* Control.swift */; };
+		AC7C88881C8F646B00E6422A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88831C8F646B00E6422A /* Event.swift */; };
+		AC7C88891C8F646B00E6422A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88841C8F646B00E6422A /* Timer.swift */; };
+		AC7C888A1C8F646B00E6422A /* TimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88851C8F646B00E6422A /* TimerEvent.swift */; };
+		AC7C888B1C8F646B00E6422A /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88861C8F646B00E6422A /* TimerState.swift */; };
+		AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */; };
 		ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */; };
 		ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */; };
 		ACC90E811C87AF1000A5B0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC90E7F1C87AF1000A5B0F9 /* Main.storyboard */; };
@@ -15,6 +23,8 @@
 		ACC90E891C87AF1000A5B0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC90E871C87AF1000A5B0F9 /* LaunchScreen.storyboard */; };
 		ACC90E941C87AF1100A5B0F9 /* TabataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E931C87AF1100A5B0F9 /* TabataTests.swift */; };
 		ACC90E9F1C87AF1100A5B0F9 /* TabataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E9E1C87AF1100A5B0F9 /* TabataUITests.swift */; };
+		ACC90EAD1C87B38B00A5B0F9 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90EAC1C87B38B00A5B0F9 /* ProgramViewController.swift */; };
+		ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC7C887E1C8F646000E6422A /* GeneralObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralObserver.swift; sourceTree = "<group>"; };
+		AC7C887F1C8F646000E6422A /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		AC7C88821C8F646B00E6422A /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		AC7C88831C8F646B00E6422A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		AC7C88841C8F646B00E6422A /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		AC7C88851C8F646B00E6422A /* TimerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEvent.swift; sourceTree = "<group>"; };
+		AC7C88861C8F646B00E6422A /* TimerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		ACC90E781C87AF1000A5B0F9 /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 		ACC90E9A1C87AF1100A5B0F9 /* TabataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC90E9E1C87AF1100A5B0F9 /* TabataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabataUITests.swift; sourceTree = "<group>"; };
 		ACC90EA01C87AF1100A5B0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACC90EAC1C87B38B00A5B0F9 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +99,7 @@
 		ACC90E6F1C87AF1000A5B0F9 = {
 			isa = PBXGroup;
 			children = (
+				ACC90F0D1C87C8E400A5B0F9 /* Timer */,
 				ACC90E7A1C87AF1000A5B0F9 /* Tabata */,
 				ACC90E921C87AF1100A5B0F9 /* TabataTests */,
 				ACC90E9D1C87AF1100A5B0F9 /* TabataUITests */,
@@ -106,6 +127,9 @@
 				ACC90E871C87AF1000A5B0F9 /* LaunchScreen.storyboard */,
 				ACC90E8A1C87AF1000A5B0F9 /* Info.plist */,
 				ACC90E821C87AF1000A5B0F9 /* Tabata.xcdatamodeld */,
+				ACC90EAC1C87B38B00A5B0F9 /* ProgramViewController.swift */,
+				ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */,
+				AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */,
 			);
 			path = Tabata;
 			sourceTree = "<group>";
@@ -126,6 +150,20 @@
 				ACC90EA01C87AF1100A5B0F9 /* Info.plist */,
 			);
 			path = TabataUITests;
+			sourceTree = "<group>";
+		};
+		ACC90F0D1C87C8E400A5B0F9 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				AC7C88821C8F646B00E6422A /* Control.swift */,
+				AC7C88831C8F646B00E6422A /* Event.swift */,
+				AC7C88841C8F646B00E6422A /* Timer.swift */,
+				AC7C88851C8F646B00E6422A /* TimerEvent.swift */,
+				AC7C88861C8F646B00E6422A /* TimerState.swift */,
+				AC7C887E1C8F646000E6422A /* GeneralObserver.swift */,
+				AC7C887F1C8F646000E6422A /* Observer.swift */,
+			);
+			name = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +297,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7C88801C8F646000E6422A /* GeneralObserver.swift in Sources */,
+				AC7C888B1C8F646B00E6422A /* TimerState.swift in Sources */,
+				AC7C88881C8F646B00E6422A /* Event.swift in Sources */,
+				AC7C88871C8F646B00E6422A /* Control.swift in Sources */,
+				AC7C88891C8F646B00E6422A /* Timer.swift in Sources */,
+				AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */,
+				AC7C888A1C8F646B00E6422A /* TimerEvent.swift in Sources */,
+				ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */,
 				ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */,
+				ACC90EAD1C87B38B00A5B0F9 /* ProgramViewController.swift in Sources */,
 				ACC90E841C87AF1000A5B0F9 /* Tabata.xcdatamodeld in Sources */,
+				AC7C88811C8F646000E6422A /* Observer.swift in Sources */,
 				ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tabata/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gbsw.Tabata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tabata/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gbsw.Tabata;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,6 +538,7 @@
 				ACC90EA51C87AF1100A5B0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACC90EA61C87AF1100A5B0F9 /* Build configuration list for PBXNativeTarget "TabataTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +547,7 @@
 				ACC90EA81C87AF1100A5B0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACC90EA91C87AF1100A5B0F9 /* Build configuration list for PBXNativeTarget "TabataUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +556,7 @@
 				ACC90EAB1C87AF1100A5B0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
