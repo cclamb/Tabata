@@ -7,11 +7,12 @@
 */
 import Foundation
 
-func defaultFirePolicy<T: Hashable, S: Event>(
+func defaultFirePolicy<T: Hashable, S: Event, I: Interval>(
     myTimer: NSTimer,
     inout timerState: TimerState,
-    timer: Timer<T, S>,
-    observer: GeneralObserver<T, S>
+    timer: Timer<T, S, I>,
+    observer: GeneralObserver<T, S>,
+    programManager: ProgramManager<S,I>
     ) -> Void {
         
         if timerState.stopTimer {
@@ -21,38 +22,44 @@ func defaultFirePolicy<T: Hashable, S: Event>(
         }
         
         if timerState.restartTimer {
-            timerState.elapsedSeconds = 0
+            programManager.currentCnt = 0
+            programManager.totalCnt = 0
             timerState.restartTimer = false
             timer.start()
         }
         
-        timerState.elapsedSeconds++
-        
-        let ti = NSTimeInterval(timerState.elapsedSeconds)
-        let event = S(secondsElapsed: ti)
+        let event = programManager.notify()
         observer.notify(event)
-        
-        if timerState.elapsedSeconds >= 10 {
+        if event.status == .Complete {
             myTimer.invalidate()
         }
 }
 
-public final class Timer<T: Hashable, S: Event>: Control {
+public final class Timer<T: Hashable, S: Event, I: Interval>: Observer, Control {
     
-    public typealias TimerPolicy = (NSTimer, inout TimerState, Timer<T, S>, GeneralObserver<T, S>) -> Void
+    public typealias TimerPolicy = (NSTimer,
+        inout TimerState, Timer<T, S, I>,
+        GeneralObserver<T, S>,
+        ProgramManager<S,I>) -> Void
     
-    private var interval: NSTimeInterval
     private weak var timer: NSTimer?
-    private var timerState = TimerState()
+    
     private var firePolicy: TimerPolicy
+    private var programManager: ProgramManager<S,I>
+    private var interval: NSTimeInterval
+    
+    private var timerState = TimerState()
     private var observerManager = GeneralObserver<T,S>()
     
     
+    
     public init(
+        program: [I],
         interval: NSTimeInterval = 1.0,
         firePolicy: TimerPolicy = defaultFirePolicy
     ) {
         self.interval = interval
+        programManager = ProgramManager<S,I>(program: program, intervalSize: interval)
         self.firePolicy = firePolicy
     }
     
@@ -88,7 +95,7 @@ public final class Timer<T: Hashable, S: Event>: Control {
     }
     
     dynamic func timerFire(myTimer: NSTimer) {
-        firePolicy(myTimer, &timerState, self, self.observerManager)
+        firePolicy(myTimer, &timerState, self, self.observerManager, self.programManager)
     }
     
 }
