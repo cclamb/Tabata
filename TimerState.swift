@@ -1,7 +1,10 @@
 import Foundation
 
 public struct TimerState {
-    public init() {}
-    public var stopTimer = false
-    public var restartTimer = false
+    public init(stopTimer: Bool, restartTimer: Bool) {
+        self.stopTimer = stopTimer
+        self.restartTimer = restartTimer
+    }
+    public var stopTimer: Bool
+    public var restartTimer: Bool
 }

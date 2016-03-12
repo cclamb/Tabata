@@ -49,7 +49,7 @@ public final class Timer<T: Hashable, S: Event, I: Interval where S.IntervalType
     private var programManager: ProgramManager<S,I>
     private var interval: NSTimeInterval
     
-    private var timerState = TimerState()
+    private var timerState = TimerState(stopTimer: true, restartTimer: false)
     private var observerManager = GeneralObserver<T,S>()
     
     
@@ -73,12 +73,15 @@ public final class Timer<T: Hashable, S: Event, I: Interval where S.IntervalType
     }
     
     public func start() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(
-            interval,
-            target: self,
-            selector: Selector("timerFire:"),
-            userInfo: nil,
-            repeats: true)
+        if timerState.stopTimer == true {
+            timerState.stopTimer = false
+            timer = NSTimer.scheduledTimerWithTimeInterval(
+                interval,
+                target: self,
+                selector: Selector("timerFire:"),
+                userInfo: nil,
+                repeats: true)
+        }
     }
     
     public func stop() {
