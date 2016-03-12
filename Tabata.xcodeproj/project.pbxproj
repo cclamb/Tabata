@@ -10,6 +10,19 @@
 		AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */; };
 		AC7C88901C92314300E6422A /* GeneralObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888E1C92314300E6422A /* GeneralObserver.swift */; };
 		AC7C88911C92314300E6422A /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888F1C92314300E6422A /* Observer.swift */; };
+		AC7C889D1C92323F00E6422A /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88921C92323F00E6422A /* Control.swift */; };
+		AC7C889E1C92323F00E6422A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88931C92323F00E6422A /* Event.swift */; };
+		AC7C889F1C92323F00E6422A /* GeneralInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88941C92323F00E6422A /* GeneralInterval.swift */; };
+		AC7C88A01C92323F00E6422A /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88951C92323F00E6422A /* Interval.swift */; };
+		AC7C88A11C92323F00E6422A /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88961C92323F00E6422A /* ProgramManager.swift */; };
+		AC7C88A21C92323F00E6422A /* ProgramStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88971C92323F00E6422A /* ProgramStatus.swift */; };
+		AC7C88A31C92323F00E6422A /* RestInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88981C92323F00E6422A /* RestInterval.swift */; };
+		AC7C88A41C92323F00E6422A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88991C92323F00E6422A /* Timer.swift */; };
+		AC7C88A51C92323F00E6422A /* TimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889A1C92323F00E6422A /* TimerEvent.swift */; };
+		AC7C88A61C92323F00E6422A /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889B1C92323F00E6422A /* TimerState.swift */; };
+		AC7C88A71C92323F00E6422A /* WorkInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889C1C92323F00E6422A /* WorkInterval.swift */; };
+		AC7C88A91C939A1E00E6422A /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88A81C939A1E00E6422A /* Program.swift */; };
+		AC7C88AB1C939AB200E6422A /* TimerProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88AA1C939AB200E6422A /* TimerProgram.swift */; };
 		ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */; };
 		ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */; };
 		ACC90E811C87AF1000A5B0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC90E7F1C87AF1000A5B0F9 /* Main.storyboard */; };
@@ -43,6 +56,19 @@
 		AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		AC7C888E1C92314300E6422A /* GeneralObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralObserver.swift; sourceTree = "<group>"; };
 		AC7C888F1C92314300E6422A /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		AC7C88921C92323F00E6422A /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		AC7C88931C92323F00E6422A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		AC7C88941C92323F00E6422A /* GeneralInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInterval.swift; sourceTree = "<group>"; };
+		AC7C88951C92323F00E6422A /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		AC7C88961C92323F00E6422A /* ProgramManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
+		AC7C88971C92323F00E6422A /* ProgramStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramStatus.swift; sourceTree = "<group>"; };
+		AC7C88981C92323F00E6422A /* RestInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestInterval.swift; sourceTree = "<group>"; };
+		AC7C88991C92323F00E6422A /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		AC7C889A1C92323F00E6422A /* TimerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEvent.swift; sourceTree = "<group>"; };
+		AC7C889B1C92323F00E6422A /* TimerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		AC7C889C1C92323F00E6422A /* WorkInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkInterval.swift; sourceTree = "<group>"; };
+		AC7C88A81C939A1E00E6422A /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		AC7C88AA1C939AB200E6422A /* TimerProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerProgram.swift; sourceTree = "<group>"; };
 		ACC90E781C87AF1000A5B0F9 /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +171,21 @@
 		ACC90F0D1C87C8E400A5B0F9 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
+				AC7C88921C92323F00E6422A /* Control.swift */,
+				AC7C88931C92323F00E6422A /* Event.swift */,
+				AC7C88941C92323F00E6422A /* GeneralInterval.swift */,
+				AC7C88951C92323F00E6422A /* Interval.swift */,
+				AC7C88961C92323F00E6422A /* ProgramManager.swift */,
+				AC7C88971C92323F00E6422A /* ProgramStatus.swift */,
+				AC7C88981C92323F00E6422A /* RestInterval.swift */,
+				AC7C88991C92323F00E6422A /* Timer.swift */,
+				AC7C889A1C92323F00E6422A /* TimerEvent.swift */,
+				AC7C889B1C92323F00E6422A /* TimerState.swift */,
+				AC7C889C1C92323F00E6422A /* WorkInterval.swift */,
 				AC7C888E1C92314300E6422A /* GeneralObserver.swift */,
 				AC7C888F1C92314300E6422A /* Observer.swift */,
+				AC7C88A81C939A1E00E6422A /* Program.swift */,
+				AC7C88AA1C939AB200E6422A /* TimerProgram.swift */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -282,14 +321,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7C88A91C939A1E00E6422A /* Program.swift in Sources */,
 				AC7C88901C92314300E6422A /* GeneralObserver.swift in Sources */,
+				AC7C88AB1C939AB200E6422A /* TimerProgram.swift in Sources */,
 				AC7C88911C92314300E6422A /* Observer.swift in Sources */,
+				AC7C88A01C92323F00E6422A /* Interval.swift in Sources */,
+				AC7C88A31C92323F00E6422A /* RestInterval.swift in Sources */,
 				AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */,
 				ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */,
+				AC7C88A11C92323F00E6422A /* ProgramManager.swift in Sources */,
+				AC7C88A41C92323F00E6422A /* Timer.swift in Sources */,
+				AC7C889F1C92323F00E6422A /* GeneralInterval.swift in Sources */,
+				AC7C889E1C92323F00E6422A /* Event.swift in Sources */,
+				AC7C88A21C92323F00E6422A /* ProgramStatus.swift in Sources */,
 				ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */,
+				AC7C889D1C92323F00E6422A /* Control.swift in Sources */,
+				AC7C88A61C92323F00E6422A /* TimerState.swift in Sources */,
 				ACC90EAD1C87B38B00A5B0F9 /* ProgramViewController.swift in Sources */,
 				ACC90E841C87AF1000A5B0F9 /* Tabata.xcdatamodeld in Sources */,
+				AC7C88A71C92323F00E6422A /* WorkInterval.swift in Sources */,
 				ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */,
+				AC7C88A51C92323F00E6422A /* TimerEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
