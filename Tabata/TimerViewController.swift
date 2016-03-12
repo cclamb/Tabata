@@ -25,12 +25,15 @@ class TimerViewController: UIViewController {
         RestInterval(interval: 10 * 100, description: "rest"),
     ])
     
-    @IBOutlet weak var millisecondLabel: UILabel!
-    
+   
     var timerManager = TimerManager()
     
     var currentTimer: Timer<String,TimerEvent<GeneralInterval>,GeneralInterval>?
-
+    
+    @IBOutlet weak var millisecondLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var stopButton: UIButton!
@@ -50,6 +53,10 @@ class TimerViewController: UIViewController {
     
     @IBAction func startButtonPressed(sender: UIButton) {
         debugPrint("startButtonPressed:sender")
+        if let myCurrentTimer = currentTimer {
+            timerManager.deleteTimer(myCurrentTimer)
+        }
+        nameLabel.text = program.name
         currentTimer = timerManager.createTimer(program)
         currentTimer!.start()
         currentTimer!.addObserver("vc_1", observer: self.notify)

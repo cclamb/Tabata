@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="width" constant="60" id="3Bb-rU-cjk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf2-i7-POD">
@@ -92,6 +92,15 @@
                                     <constraint firstAttribute="height" constant="135" id="23D-WY-VMV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="140"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPP-Z8-kc2">
+                                <rect key="frame" x="82" y="161" width="436" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="436" id="aRf-8m-Qha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -102,6 +111,7 @@
                             <constraint firstItem="cf2-i7-POD" firstAttribute="top" secondItem="395-wu-SCR" secondAttribute="bottom" constant="5" id="6GQ-7q-MbE"/>
                             <constraint firstItem="gJy-4q-rcd" firstAttribute="top" secondItem="395-wu-SCR" secondAttribute="bottom" constant="5" id="BsU-Ex-cKe"/>
                             <constraint firstItem="isR-Yq-b12" firstAttribute="top" secondItem="DJl-xb-ZMz" secondAttribute="bottom" constant="5" id="F64-aF-FrI"/>
+                            <constraint firstItem="UPP-Z8-kc2" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="62" id="F7N-Gv-vGr"/>
                             <constraint firstItem="DJl-xb-ZMz" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="FZg-Aj-0eS"/>
                             <constraint firstItem="gJy-4q-rcd" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="JpH-ve-tm6"/>
                             <constraint firstItem="m7r-Sz-S0N" firstAttribute="top" secondItem="gJy-4q-rcd" secondAttribute="bottom" constant="5" id="Mtx-B3-RZ7"/>
@@ -110,12 +120,14 @@
                             <constraint firstItem="m7r-Sz-S0N" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="eBD-RG-aJa"/>
                             <constraint firstItem="C6Q-ME-u54" firstAttribute="leading" secondItem="cf2-i7-POD" secondAttribute="trailing" constant="1" id="jom-Yg-Tm1"/>
                             <constraint firstItem="C6Q-ME-u54" firstAttribute="top" secondItem="395-wu-SCR" secondAttribute="bottom" constant="5" id="n1T-bO-X5b"/>
+                            <constraint firstItem="UPP-Z8-kc2" firstAttribute="top" secondItem="cf2-i7-POD" secondAttribute="bottom" constant="1" id="rfn-96-MNy"/>
                             <constraint firstItem="isR-Yq-b12" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="vGb-RZ-vtT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="timer" id="iBL-mv-gwO"/>
                     <connections>
                         <outlet property="millisecondLabel" destination="C6Q-ME-u54" id="47i-Zb-Kbx"/>
+                        <outlet property="nameLabel" destination="UPP-Z8-kc2" id="KWu-bT-R8E"/>
                         <outlet property="resetButton" destination="isR-Yq-b12" id="JId-1D-hjD"/>
                         <outlet property="restartButton" destination="DJl-xb-ZMz" id="3nK-xP-DrA"/>
                         <outlet property="startButton" destination="m7r-Sz-S0N" id="wgI-tC-09t"/>

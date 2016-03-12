@@ -30,6 +30,7 @@ public class TimerManager: Control {
     public func deleteTimer<K: Hashable,S: Event,I where S.IntervalType == I>(
         timer: Timer<K,S,I>
     ) {
+        timer.stop()
         let idx = timers.indexOf {
             let ctrl: Timer<K,S,I>? = $0 as? Timer<K,S,I>
             if let myControl = ctrl {
