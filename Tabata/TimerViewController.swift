@@ -10,9 +10,26 @@ import UIKit
 
 class TimerViewController: UIViewController {
     
+    var program = TimerProgram(name: "Test Program", program: [
+        WorkInterval(interval: 20 * 100, description: "work"),
+        RestInterval(interval: 10 * 100, description: "rest"),
+        WorkInterval(interval: 20 * 100, description: "work"),
+        RestInterval(interval: 10 * 100, description: "rest"),
+        WorkInterval(interval: 20 * 100, description: "work"),
+        RestInterval(interval: 10 * 100, description: "rest"),
+        WorkInterval(interval: 20 * 100, description: "work"),
+        RestInterval(interval: 10 * 100, description: "rest"),
+        WorkInterval(interval: 20 * 100, description: "work"),
+        RestInterval(interval: 10 * 100, description: "rest"),
+        WorkInterval(interval: 20 * 100, description: "work"),
+        RestInterval(interval: 10 * 100, description: "rest"),
+    ])
+    
+    @IBOutlet weak var millisecondLabel: UILabel!
+    
     var timerManager = TimerManager()
     
-    var currentTimer: Timer<String,TimerEvent>?
+    var currentTimer: Timer<String,TimerEvent<GeneralInterval>,GeneralInterval>?
 
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -33,7 +50,7 @@ class TimerViewController: UIViewController {
     
     @IBAction func startButtonPressed(sender: UIButton) {
         debugPrint("startButtonPressed:sender")
-        currentTimer = timerManager.createTimer(1.0)
+        currentTimer = timerManager.createTimer(program)
         currentTimer!.start()
         currentTimer!.addObserver("vc_1", observer: self.notify)
     }
@@ -57,9 +74,25 @@ class TimerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func notify(event: TimerEvent) {
-        debugPrint(event)
-        timeLabel!.text = String(event.secondsElapsed)
+    private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {
+        
+        let format = {(value: Int) in
+            return value < 10
+                ? String(format: "0%d", value)
+                : String(format: "%d", value)
+        }
+
+        
+        let intervals = event.intervalsElapsed
+        let minutes = 0
+        let seconds = Int(intervals) / 100
+        let milliSeconds = Int(intervals) - seconds * 100
+        let formattedMinutes = format(minutes)
+        let formattedSeconds = format(seconds)
+        let time = " \(formattedMinutes):\(formattedSeconds)"
+        let millisecondTime = String(format: " %d", milliSeconds)
+        timeLabel!.text = time
+        millisecondLabel.text = millisecondTime
     }
     
 
