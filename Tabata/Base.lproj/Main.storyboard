@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--program-->
@@ -36,8 +37,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7r-Sz-S0N">
-                                <rect key="frame" x="173" y="183" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7r-Sz-S0N">
+                                <rect key="frame" x="21" y="60" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="EFa-31-VIR"/>
                                 </constraints>
@@ -46,8 +47,8 @@
                                     <action selector="startButtonPressed:" destination="Fov-sH-bsw" eventType="touchUpInside" id="tET-3I-ebB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-4q-rcd">
-                                <rect key="frame" x="173" y="147" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-4q-rcd">
+                                <rect key="frame" x="21" y="25" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="5mR-rb-NAZ"/>
                                 </constraints>
@@ -56,8 +57,8 @@
                                     <action selector="stopButtonPressed:" destination="Fov-sH-bsw" eventType="touchUpInside" id="pMh-fj-ZDJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJl-xb-ZMz">
-                                <rect key="frame" x="173" y="220" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJl-xb-ZMz">
+                                <rect key="frame" x="21" y="95" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="WcA-8E-9gk"/>
                                 </constraints>
@@ -66,8 +67,8 @@
                                     <action selector="restartButtonPressed:" destination="Fov-sH-bsw" eventType="touchUpInside" id="ioF-t6-UeE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isR-Yq-b12">
-                                <rect key="frame" x="172" y="256" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isR-Yq-b12">
+                                <rect key="frame" x="21" y="130" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="axo-fX-1bx"/>
                                 </constraints>
@@ -76,17 +77,45 @@
                                     <action selector="resetButtonPressed:" destination="Fov-sH-bsw" eventType="touchUpInside" id="QHv-UT-w0y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf2-i7-POD">
-                                <rect key="frame" x="245" y="146" width="110" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6Q-ME-u54">
+                                <rect key="frame" x="519" y="25" width="60" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="3Bb-rU-cjk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf2-i7-POD">
+                                <rect key="frame" x="82" y="25" width="436" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="23D-WY-VMV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="140"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cf2-i7-POD" firstAttribute="leading" secondItem="gJy-4q-rcd" secondAttribute="trailing" constant="1" id="56a-11-TPO"/>
+                            <constraint firstItem="cf2-i7-POD" firstAttribute="top" secondItem="395-wu-SCR" secondAttribute="bottom" constant="5" id="6GQ-7q-MbE"/>
+                            <constraint firstItem="gJy-4q-rcd" firstAttribute="top" secondItem="395-wu-SCR" secondAttribute="bottom" constant="5" id="BsU-Ex-cKe"/>
+                            <constraint firstItem="isR-Yq-b12" firstAttribute="top" secondItem="DJl-xb-ZMz" secondAttribute="bottom" constant="5" id="F64-aF-FrI"/>
+                            <constraint firstItem="DJl-xb-ZMz" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="FZg-Aj-0eS"/>
+                            <constraint firstItem="gJy-4q-rcd" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="JpH-ve-tm6"/>
+                            <constraint firstItem="m7r-Sz-S0N" firstAttribute="top" secondItem="gJy-4q-rcd" secondAttribute="bottom" constant="5" id="Mtx-B3-RZ7"/>
+                            <constraint firstItem="DJl-xb-ZMz" firstAttribute="top" secondItem="m7r-Sz-S0N" secondAttribute="bottom" constant="5" id="SgD-N4-ONh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C6Q-ME-u54" secondAttribute="trailing" constant="1" id="bqF-e3-ptO"/>
+                            <constraint firstItem="m7r-Sz-S0N" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="eBD-RG-aJa"/>
+                            <constraint firstItem="C6Q-ME-u54" firstAttribute="leading" secondItem="cf2-i7-POD" secondAttribute="trailing" constant="1" id="jom-Yg-Tm1"/>
+                            <constraint firstItem="C6Q-ME-u54" firstAttribute="top" secondItem="395-wu-SCR" secondAttribute="bottom" constant="5" id="n1T-bO-X5b"/>
+                            <constraint firstItem="isR-Yq-b12" firstAttribute="leading" secondItem="yrx-Cc-5Nm" secondAttribute="leadingMargin" constant="1" id="vGb-RZ-vtT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="timer" id="iBL-mv-gwO"/>
                     <connections>
+                        <outlet property="millisecondLabel" destination="C6Q-ME-u54" id="47i-Zb-Kbx"/>
                         <outlet property="resetButton" destination="isR-Yq-b12" id="JId-1D-hjD"/>
                         <outlet property="restartButton" destination="DJl-xb-ZMz" id="3nK-xP-DrA"/>
                         <outlet property="startButton" destination="m7r-Sz-S0N" id="wgI-tC-09t"/>
