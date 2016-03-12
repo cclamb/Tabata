@@ -1,8 +1,8 @@
 import Foundation
 
-public final class ProgramManager<E: Event, I: Interval>{
+public final class ProgramManager<E: Event, I: Interval where E.IntervalType == I>{
     
-    private var program: [I]
+    private var program: TimerProgram<I>
     private var currentInterval: I?
     private var currentIdx = 0
     
@@ -10,7 +10,7 @@ public final class ProgramManager<E: Event, I: Interval>{
     public var totalCnt = 0.0
     public var intervalSize = 0.01
     
-    public init(program: [I], intervalSize: NSTimeInterval = 0.01) {
+    public init(program: TimerProgram<I>, intervalSize: NSTimeInterval = 0.01) {
         self.program = program
         self.intervalSize = intervalSize
     }
@@ -23,6 +23,8 @@ public final class ProgramManager<E: Event, I: Interval>{
                 intervalsElapsed: currentCnt,
                 intervalsRemaining: 0,
                 intervalSize: intervalSize,
+                programIndex: currentIdx,
+                program: program,
                 status: .Complete)
         case .InProgress:
             currentCnt++
@@ -31,6 +33,8 @@ public final class ProgramManager<E: Event, I: Interval>{
                 intervalsElapsed: currentCnt,
                 intervalsRemaining: currentInterval!.interval - currentCnt,
                 intervalSize: intervalSize,
+                programIndex: currentIdx,
+                program: program,
                 status: .InProgress
             )
         case .IntervalStarting:
@@ -40,6 +44,8 @@ public final class ProgramManager<E: Event, I: Interval>{
                 intervalsElapsed: currentCnt,
                 intervalsRemaining: currentInterval!.interval - currentCnt,
                 intervalSize: intervalSize,
+                programIndex: currentIdx,
+                program: program,
                 status: .IntervalStarting
             )
         case .Starting:
@@ -49,6 +55,8 @@ public final class ProgramManager<E: Event, I: Interval>{
                 intervalsElapsed: currentCnt,
                 intervalsRemaining: currentInterval!.interval - currentCnt,
                 intervalSize: intervalSize,
+                programIndex: currentIdx,
+                program: program,
                 status: .Starting
             )
         }
@@ -68,12 +76,12 @@ public final class ProgramManager<E: Event, I: Interval>{
     }
     
     private func checkProgramFinished() -> Bool {
-        return currentIdx >= program.count ? true : false
+        return currentIdx >= program.program.count ? true : false
     }
     
     private func checkCurrentInterval() -> ProgramStatus {
         if currentInterval == nil {
-            currentInterval = program[currentIdx++]
+            currentInterval = program.program[currentIdx++]
             return .Starting
         }
         return .InProgress
@@ -85,7 +93,7 @@ public final class ProgramManager<E: Event, I: Interval>{
         }
         
         if currentCnt >= myCurrentInterval.interval {
-            currentInterval = program[currentIdx++]
+            currentInterval = program.program[currentIdx++]
             currentCnt = 0
             return .IntervalStarting
         }

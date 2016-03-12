@@ -35,7 +35,8 @@ func defaultFirePolicy<T: Hashable, S: Event, I: Interval>(
         }
 }
 
-public final class Timer<T: Hashable, S: Event, I: Interval>: Observer, Control {
+public final class Timer<T: Hashable, S: Event, I: Interval where S.IntervalType == I>
+    : Observer, Control {
     
     public typealias TimerPolicy = (NSTimer,
         inout TimerState, Timer<T, S, I>,
@@ -54,7 +55,7 @@ public final class Timer<T: Hashable, S: Event, I: Interval>: Observer, Control 
     
     
     public init(
-        program: [I],
+        program: TimerProgram<I>,
         interval: NSTimeInterval = 1.0,
         firePolicy: TimerPolicy = defaultFirePolicy
     ) {
