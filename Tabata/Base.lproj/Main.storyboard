@@ -16,9 +16,15 @@
                     <view key="view" contentMode="scaleToFill" id="eRj-OA-oz6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="program" id="OEe-eO-aIf"/>
+                    <tabBarItem key="tabBarItem" title="program" image="Program" id="OEe-eO-aIf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmm-Rg-yR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,8 +41,15 @@
                     <view key="view" contentMode="scaleToFill" id="yrx-Cc-5Nm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="timer" id="iBL-mv-gwO"/>
+                    <tabBarItem key="tabBarItem" title="timer" image="Timer" id="iBL-mv-gwO">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbe-HY-XwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +59,8 @@
         <scene sceneID="evy-0Z-fqS">
             <objects>
                 <tabBarController id="2oe-cj-hGe" customClass="ViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="cb6-ZK-B5C">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="cb6-ZK-B5C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -61,4 +75,8 @@
             <point key="canvasLocation" x="548" y="712"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Program" width="25" height="25"/>
+        <image name="Timer" width="25" height="25"/>
+    </resources>
 </document>
