@@ -30,19 +30,19 @@ class TimerViewController: UIViewController {
     
     var currentTimer: Timer<String,TimerEvent<GeneralInterval>,GeneralInterval>?
     
-    @IBOutlet weak var millisecondLabel: UILabel!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var timeLabel: UILabel!
-    
-    @IBOutlet weak var stopButton: UIButton!
-    
-    @IBOutlet weak var startButton: UIButton!
-    
-    @IBOutlet weak var restartButton: UIButton!
-    
-    @IBOutlet weak var resetButton: UIButton!
+//    @IBOutlet weak var millisecondLabel: UILabel!
+//    
+//    @IBOutlet weak var nameLabel: UILabel!
+//    
+//    @IBOutlet weak var timeLabel: UILabel!
+//    
+//    @IBOutlet weak var stopButton: UIButton!
+//    
+//    @IBOutlet weak var startButton: UIButton!
+//    
+//    @IBOutlet weak var restartButton: UIButton!
+//    
+//    @IBOutlet weak var resetButton: UIButton!
     
     @IBAction func stopButtonPressed(sender: UIButton) {
         debugPrint("stopButtonPressed:sender")
@@ -53,13 +53,13 @@ class TimerViewController: UIViewController {
     
     @IBAction func startButtonPressed(sender: UIButton) {
         debugPrint("startButtonPressed:sender")
-        if let myCurrentTimer = currentTimer {
-            timerManager.deleteTimer(myCurrentTimer)
-        }
-        nameLabel.text = program.name
-        currentTimer = timerManager.createTimer(program)
-        currentTimer!.start()
-        currentTimer!.addObserver("vc_1", observer: self.notify)
+//        if let myCurrentTimer = currentTimer {
+//            timerManager.deleteTimer(myCurrentTimer)
+//        }
+//        nameLabel.text = program.name
+//        currentTimer = timerManager.createTimer(program)
+//        currentTimer!.start()
+//        currentTimer!.addObserver("vc_1", observer: self.notify)
     }
     
     @IBAction func restartButtonPressed(sender: UIButton) {
@@ -94,12 +94,17 @@ class TimerViewController: UIViewController {
         let minutes = 0
         let seconds = Int(intervals) / 100
         let milliSeconds = Int(intervals) - seconds * 100
+        let formattedMillis = format(milliSeconds)
         let formattedMinutes = format(minutes)
         let formattedSeconds = format(seconds)
-        let time = " \(formattedMinutes):\(formattedSeconds)"
-        let millisecondTime = String(format: " %d", milliSeconds)
-        timeLabel!.text = time
-        millisecondLabel.text = millisecondTime
+        let time = " \(formattedMinutes):\(formattedSeconds) "
+        let millisecondTime = " \(formattedMillis) "
+        debugPrint(" \(time):\(millisecondTime) ")
+//        timeLabel!.text = time
+//        millisecondLabel.text = millisecondTime
+//        if let myCurrentInterval = event.currentInterval {
+//            messageLabel.text = myCurrentInterval.description
+//        }
     }
     
 

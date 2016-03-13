@@ -25,6 +25,7 @@ public final class ProgramManager<E: Event, I: Interval where E.IntervalType == 
                 intervalSize: intervalSize,
                 programIndex: currentIdx,
                 program: program,
+                currentInterval: currentInterval,
                 status: .Complete)
         case .InProgress:
             currentCnt++
@@ -35,6 +36,7 @@ public final class ProgramManager<E: Event, I: Interval where E.IntervalType == 
                 intervalSize: intervalSize,
                 programIndex: currentIdx,
                 program: program,
+                currentInterval: currentInterval,
                 status: .InProgress
             )
         case .IntervalStarting:
@@ -46,6 +48,7 @@ public final class ProgramManager<E: Event, I: Interval where E.IntervalType == 
                 intervalSize: intervalSize,
                 programIndex: currentIdx,
                 program: program,
+                currentInterval: currentInterval,
                 status: .IntervalStarting
             )
         case .Starting:
@@ -57,6 +60,7 @@ public final class ProgramManager<E: Event, I: Interval where E.IntervalType == 
                 intervalSize: intervalSize,
                 programIndex: currentIdx,
                 program: program,
+                currentInterval: currentInterval,
                 status: .Starting
             )
         }

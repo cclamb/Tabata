@@ -6,6 +6,7 @@ public struct TimerEvent<I: Interval>: Event {
     var _intervalSize = 1.0
     var _programIndex = 0
     var _program: TimerProgram<I>
+    var _currentInterval: I?
     var _status = ProgramStatus.InProgress
     public init(
         intervalsElapsed: NSTimeInterval,
@@ -13,12 +14,14 @@ public struct TimerEvent<I: Interval>: Event {
         intervalSize: NSTimeInterval,
         programIndex: Int,
         program: TimerProgram<I>,
+        currentInterval: I?,
         status: ProgramStatus) {
         _intervalsElapsed = intervalsElapsed
         _intervalsRemaining = intervalsRemaining
         _intervalSize = intervalSize
         _programIndex = programIndex
         _program = program
+        _currentInterval = currentInterval
         _status = status
     }
     public var intervalsElapsed: NSTimeInterval {
@@ -44,6 +47,11 @@ public struct TimerEvent<I: Interval>: Event {
     public var program: TimerProgram<I> {
         get {
             return _program
+        }
+    }
+    public var currentInterval: I? {
+        get {
+            return _currentInterval
         }
     }
     public var status: ProgramStatus {

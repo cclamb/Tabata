@@ -8,6 +8,7 @@ public protocol Event {
         intervalSize: NSTimeInterval,
         programIndex: Int,
         program: TimerProgram<IntervalType>,
+        currentInterval: IntervalType?,
         status: ProgramStatus
     )
     var intervalsElapsed: NSTimeInterval { get }
@@ -15,5 +16,6 @@ public protocol Event {
     var intervalSize: NSTimeInterval { get }
     var programIndex: Int { get }
     var program: TimerProgram<IntervalType> { get }
+    var currentInterval: IntervalType? { get }
     var status: ProgramStatus { get }
 }
