@@ -81,6 +81,10 @@ class TimerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {
         
         let format = {(value: Int) in
