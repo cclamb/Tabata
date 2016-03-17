@@ -5,54 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--program-->
-        <scene sceneID="iID-cz-Adr">
-            <objects>
-                <viewController id="pXq-7v-B9J" customClass="ProgramViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xca-XL-obp"/>
-                        <viewControllerLayoutGuide type="bottom" id="79f-dI-HXd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eRj-OA-oz6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n3K-jh-Eay">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                        <color key="value" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="pXq-7v-B9J" id="rem-iG-sdX"/>
-                                    <outlet property="delegate" destination="pXq-7v-B9J" id="cVe-5G-J9d"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="n3K-jh-Eay" secondAttribute="trailing" id="1hV-hw-fqg"/>
-                            <constraint firstItem="n3K-jh-Eay" firstAttribute="top" secondItem="xca-XL-obp" secondAttribute="bottom" id="2zk-r5-Bqf"/>
-                            <constraint firstItem="79f-dI-HXd" firstAttribute="top" secondItem="n3K-jh-Eay" secondAttribute="bottom" id="LbN-LB-bJh"/>
-                            <constraint firstItem="n3K-jh-Eay" firstAttribute="leading" secondItem="eRj-OA-oz6" secondAttribute="leading" id="cpb-OU-UNf"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="program" image="Program" id="OEe-eO-aIf">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qmm-Rg-yR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1368" y="1042"/>
-        </scene>
         <!--time-->
         <scene sceneID="c4H-YE-nz7">
             <objects>
@@ -90,16 +42,169 @@
                     </tabBar>
                     <connections>
                         <segue destination="Fov-sH-bsw" kind="relationship" relationship="viewControllers" id="PLa-4y-MXg"/>
-                        <segue destination="pXq-7v-B9J" kind="relationship" relationship="viewControllers" id="OwP-A7-5Un"/>
+                        <segue destination="o2R-Ck-EwN" kind="relationship" relationship="viewControllers" id="apz-RP-V0I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fY8-Pj-z2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="548" y="712"/>
         </scene>
+        <!--Master-->
+        <scene sceneID="Eko-wG-EYa">
+            <objects>
+                <navigationController title="Master" id="9Fh-5M-bKq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="O7T-Wx-U3K">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wY6-Do-6df" kind="relationship" relationship="rootViewController" id="gjZ-Za-Ljo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee6-37-sGY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186" y="738"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="8mQ-6r-578">
+            <objects>
+                <viewController title="Detail" id="8Ef-ny-O31" customClass="ProgramDetailViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pKZ-Tr-J5H"/>
+                        <viewControllerLayoutGuide type="bottom" id="tEP-VY-phr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u0u-xh-oCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Xb-wkJ">
+                                <rect key="frame" x="20" y="292" width="560" height="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rlw-Xb-wkJ" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leading" constant="20" symbolic="YES" id="Sw7-E2-SrA"/>
+                            <constraint firstAttribute="trailing" secondItem="rlw-Xb-wkJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ZL3-dc-nIy"/>
+                            <constraint firstItem="rlw-Xb-wkJ" firstAttribute="centerY" secondItem="u0u-xh-oCQ" secondAttribute="centerY" id="ajx-nX-Ddk"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="iI7-Ln-p4N"/>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="rlw-Xb-wkJ" id="mom-9Y-ZYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mna-fW-bGZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933" y="1497"/>
+        </scene>
+        <!--program-->
+        <scene sceneID="jFS-N8-sRz">
+            <objects>
+                <splitViewController id="o2R-Ck-EwN" customClass="SplitViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="program" image="Program" id="Kvx-m1-ocy">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="9Fh-5M-bKq" kind="relationship" relationship="masterViewController" id="MTR-hV-XtQ"/>
+                        <segue destination="oJp-qT-uGz" kind="relationship" relationship="detailViewController" id="3nk-NF-uA9"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2AY-wd-mmf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="1038"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="Qeo-DP-abO">
+            <objects>
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="wY6-Do-6df" customClass="ProgramMasterViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6Wx-Rk-88b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="cg4-NJ-qg9" detailTextLabel="5SX-yT-6uP" style="IBUITableViewCellStyleSubtitle" id="vvj-ue-Qg3">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vvj-ue-Qg3" id="VAp-EO-WKg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cg4-NJ-qg9">
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5SX-yT-6uP">
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="oJp-qT-uGz" kind="showDetail" identifier="showDetail" id="4Kk-iA-qUs">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="tintColor" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="wY6-Do-6df" id="f7o-J8-lX3"/>
+                            <outlet property="delegate" destination="wY6-Do-6df" id="xiy-Lc-dfG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Master" id="m7i-P4-Ir7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZb-zn-yKh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933" y="738"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Ck-hL-Ubz">
+            <objects>
+                <navigationController id="oJp-qT-uGz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="uI2-gX-MRq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Ef-ny-O31" kind="relationship" relationship="rootViewController" id="RCZ-ob-8if"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpU-3X-ENq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179" y="1497"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Program" width="25" height="25"/>
         <image name="Timer" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Kk-iA-qUs"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
 </document>
