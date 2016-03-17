@@ -10,7 +10,10 @@ import UIKit
 
 class TimerViewController: UIViewController {
     
-    var program = TimerProgram(name: "Test Program", program: [
+    var program = TimerProgram(
+        name: "Test Program",
+        description: "Some test program", 
+        program: [
         WorkInterval(interval: 20 * 100, description: "work"),
         RestInterval(interval: 10 * 100, description: "rest"),
         WorkInterval(interval: 20 * 100, description: "work"),

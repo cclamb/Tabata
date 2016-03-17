@@ -75,27 +75,10 @@
                     <view key="view" contentMode="scaleToFill" id="u0u-xh-oCQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Xb-wkJ">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rlw-Xb-wkJ" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leading" constant="20" symbolic="YES" id="Sw7-E2-SrA"/>
-                            <constraint firstAttribute="trailing" secondItem="rlw-Xb-wkJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ZL3-dc-nIy"/>
-                            <constraint firstItem="rlw-Xb-wkJ" firstAttribute="centerY" secondItem="u0u-xh-oCQ" secondAttribute="centerY" id="ajx-nX-Ddk"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="iI7-Ln-p4N"/>
-                    <connections>
-                        <outlet property="detailDescriptionLabel" destination="rlw-Xb-wkJ" id="mom-9Y-ZYS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mna-fW-bGZ" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,11 +114,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="cg4-NJ-qg9" detailTextLabel="5SX-yT-6uP" style="IBUITableViewCellStyleSubtitle" id="vvj-ue-Qg3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="cg4-NJ-qg9" detailTextLabel="5SX-yT-6uP" style="IBUITableViewCellStyleSubtitle" id="vvj-ue-Qg3">
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vvj-ue-Qg3" id="VAp-EO-WKg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cg4-NJ-qg9">

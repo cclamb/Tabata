@@ -18,7 +18,8 @@ class ProgramMasterViewController: UITableViewController {
     ]
 
     var detailViewController: ProgramDetailViewController? = nil
-    var objects = [AnyObject]()
+    //var objects = [AnyObject]()
+    var programs = [ProgramFactory.Tabata]
 
 
     override func viewDidLoad() {
@@ -58,7 +59,8 @@ class ProgramMasterViewController: UITableViewController {
 
     func insertNewObject(sender: AnyObject) {
         debugPrint(">> insertNewObject:sender")
-        objects.insert(NSDate(), atIndex: 0)
+        //objects.insert(NSDate(), atIndex: 0)
+        programs.insert(ProgramFactory.EmptyProgram, atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
     }
@@ -69,10 +71,16 @@ class ProgramMasterViewController: UITableViewController {
         debugPrint(">> prepareForSeque:seque:sender")
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                //let object = objects[indexPath.row] as! NSDate
+                let program = programs[indexPath.row]
+                
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! ProgramDetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                
+                controller.detailItem = StructContainer(contained: program)
+                
+                controller.navigationItem.leftBarButtonItem =
+                    self.splitViewController?.displayModeButtonItem()
+                
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
@@ -87,17 +95,20 @@ class ProgramMasterViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         debugPrint(">> tableView:tableView:numberOfRowsInSection")
-        return objects.count
+        //return objects.count
+        return programs.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         debugPrint(">> tableView:tableView:cellForRowAtIndexPath")
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         cell.backgroundColor = UIColor.blackColor()
+        //cell.accessoryType = .DetailDisclosureButton
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
-        cell.detailTextLabel!.text = "subtitle"
+        //let object = objects[indexPath.row] as! NSDate
+        let program = programs[indexPath.row]
+        cell.textLabel!.text = program.name
+        cell.detailTextLabel!.text = program.description
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel!.textColor = UIColor.grayColor()
         
@@ -113,7 +124,8 @@ class ProgramMasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         debugPrint(">> tableView:tableView:commitEditingStyle:forRowAtIndexPath")
         if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
+            //objects.removeAtIndex(indexPath.row)
+            programs.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Right)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -154,7 +166,7 @@ class ProgramMasterViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        debugPrint(objects[indexPath.row])
+        debugPrint(programs[indexPath.row])
     }
 
 }

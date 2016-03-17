@@ -10,6 +10,8 @@ import Foundation
 
 public protocol Program {
     typealias ProgramType
+    init( name: String, description: String, program: [ProgramType])
     var name: String { get }
+    var description: String { get }
     var program: [ProgramType] { get }
 }
