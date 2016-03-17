@@ -23,6 +23,9 @@
 		AC7C88A71C92323F00E6422A /* WorkInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889C1C92323F00E6422A /* WorkInterval.swift */; };
 		AC7C88A91C939A1E00E6422A /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88A81C939A1E00E6422A /* Program.swift */; };
 		AC7C88AB1C939AB200E6422A /* TimerProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88AA1C939AB200E6422A /* TimerProgram.swift */; };
+		AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */; };
+		AC83FA831C9A4E1D00A5EC0C /* ProgramMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */; };
+		ACB874491C9A35AE002FDF83 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB874481C9A35AE002FDF83 /* SplitViewController.swift */; };
 		ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE31231C95B9F100C04369 /* TimerViewManager.swift */; };
 		ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */; };
 		ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */; };
@@ -32,7 +35,6 @@
 		ACC90E891C87AF1000A5B0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC90E871C87AF1000A5B0F9 /* LaunchScreen.storyboard */; };
 		ACC90E941C87AF1100A5B0F9 /* TabataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E931C87AF1100A5B0F9 /* TabataTests.swift */; };
 		ACC90E9F1C87AF1100A5B0F9 /* TabataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E9E1C87AF1100A5B0F9 /* TabataUITests.swift */; };
-		ACC90EAD1C87B38B00A5B0F9 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90EAC1C87B38B00A5B0F9 /* ProgramViewController.swift */; };
 		ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,9 @@
 		AC7C889C1C92323F00E6422A /* WorkInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkInterval.swift; sourceTree = "<group>"; };
 		AC7C88A81C939A1E00E6422A /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		AC7C88AA1C939AB200E6422A /* TimerProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerProgram.swift; sourceTree = "<group>"; };
+		AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewController.swift; sourceTree = "<group>"; };
+		AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramMasterViewController.swift; sourceTree = "<group>"; };
+		ACB874481C9A35AE002FDF83 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		ACBE31231C95B9F100C04369 /* TimerViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewManager.swift; sourceTree = "<group>"; };
 		ACC90E781C87AF1000A5B0F9 /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +90,6 @@
 		ACC90E9A1C87AF1100A5B0F9 /* TabataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC90E9E1C87AF1100A5B0F9 /* TabataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabataUITests.swift; sourceTree = "<group>"; };
 		ACC90EA01C87AF1100A5B0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACC90EAC1C87B38B00A5B0F9 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,9 +273,11 @@
 				ACC90E851C87AF1000A5B0F9 /* Assets.xcassets */,
 				ACC90E871C87AF1000A5B0F9 /* LaunchScreen.storyboard */,
 				ACC90E8A1C87AF1000A5B0F9 /* Info.plist */,
+				AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */,
+				AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */,
 				ACC90E821C87AF1000A5B0F9 /* Tabata.xcdatamodeld */,
-				ACC90EAC1C87B38B00A5B0F9 /* ProgramViewController.swift */,
 				ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */,
+				ACB874481C9A35AE002FDF83 /* SplitViewController.swift */,
 			);
 			path = Tabata;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 			files = (
 				ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */,
 				AC7C88A91C939A1E00E6422A /* Program.swift in Sources */,
+				AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */,
 				AC7C88901C92314300E6422A /* GeneralObserver.swift in Sources */,
 				AC7C88AB1C939AB200E6422A /* TimerProgram.swift in Sources */,
 				AC7C88911C92314300E6422A /* Observer.swift in Sources */,
@@ -446,6 +453,7 @@
 				AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */,
 				ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */,
 				AC7C88A11C92323F00E6422A /* ProgramManager.swift in Sources */,
+				AC83FA831C9A4E1D00A5EC0C /* ProgramMasterViewController.swift in Sources */,
 				AC7C88A41C92323F00E6422A /* Timer.swift in Sources */,
 				AC7C889F1C92323F00E6422A /* GeneralInterval.swift in Sources */,
 				AC7C889E1C92323F00E6422A /* Event.swift in Sources */,
@@ -453,11 +461,11 @@
 				ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */,
 				AC7C889D1C92323F00E6422A /* Control.swift in Sources */,
 				AC7C88A61C92323F00E6422A /* TimerState.swift in Sources */,
-				ACC90EAD1C87B38B00A5B0F9 /* ProgramViewController.swift in Sources */,
 				ACC90E841C87AF1000A5B0F9 /* Tabata.xcdatamodeld in Sources */,
 				AC7C88A71C92323F00E6422A /* WorkInterval.swift in Sources */,
 				ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */,
 				AC7C88A51C92323F00E6422A /* TimerEvent.swift in Sources */,
+				ACB874491C9A35AE002FDF83 /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
