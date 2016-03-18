@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--time-->
@@ -75,14 +76,40 @@
                     <view key="view" contentMode="scaleToFill" id="u0u-xh-oCQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dr-RR-cAP">
+                                <rect key="frame" x="20" y="84" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-3u-n1j">
+                                <rect key="frame" x="20" y="110" width="560" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1dr-RR-cAP" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leadingMargin" id="1p4-TT-WtD"/>
+                            <constraint firstItem="1dr-RR-cAP" firstAttribute="top" secondItem="pKZ-Tr-J5H" secondAttribute="bottom" constant="20" id="5lT-Tv-Bhx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1dr-RR-cAP" secondAttribute="trailing" id="O6b-Rm-boE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kbV-3u-n1j" secondAttribute="trailing" id="cZb-Up-beY"/>
+                            <constraint firstItem="kbV-3u-n1j" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leadingMargin" id="kT0-Zq-4KE"/>
+                            <constraint firstItem="kbV-3u-n1j" firstAttribute="top" secondItem="1dr-RR-cAP" secondAttribute="bottom" constant="5" id="rbr-zJ-mJj"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="iI7-Ln-p4N"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="kbV-3u-n1j" id="cg6-mP-dmv"/>
+                        <outlet property="nameLabel" destination="1dr-RR-cAP" id="coY-h2-hwp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mna-fW-bGZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2933" y="1497"/>
+            <point key="canvasLocation" x="2883" y="1498"/>
         </scene>
         <!--program-->
         <scene sceneID="jFS-N8-sRz">
@@ -125,14 +152,14 @@
                                             <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5SX-yT-6uP">
                                             <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

@@ -9,17 +9,14 @@
 import UIKit
 
 class ProgramMasterViewController: UITableViewController {
-    
-    let animals = ["Dogs","Cats","Mice"]
-    let messages = [
-        "Will slobber on you",
-        "Will sleep on you",
-        "Will provide food for cat"
-    ]
 
     var detailViewController: ProgramDetailViewController? = nil
-    //var objects = [AnyObject]()
-    var programs = [ProgramFactory.Tabata]
+
+    var programs = [
+        ProgramFactory.Tabata,
+        ProgramFactory.HIIT,
+        ProgramFactory.Boxing
+    ]
 
 
     override func viewDidLoad() {
@@ -28,11 +25,11 @@ class ProgramMasterViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
+        navigationItem.rightBarButtonItem = addButton
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController =
+            detailViewController =
                 (controllers[controllers.count-1] as! UINavigationController)
                     .topViewController as? ProgramDetailViewController
         }
@@ -48,7 +45,7 @@ class ProgramMasterViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+        clearsSelectionOnViewWillAppear = splitViewController!.collapsed
         super.viewWillAppear(animated)
     }
 
@@ -62,11 +59,11 @@ class ProgramMasterViewController: UITableViewController {
         //objects.insert(NSDate(), atIndex: 0)
         programs.insert(ProgramFactory.EmptyProgram, atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
     }
 
     // MARK: - Segues
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         debugPrint(">> prepareForSeque:seque:sender")
         if segue.identifier == "showDetail" {
@@ -74,12 +71,14 @@ class ProgramMasterViewController: UITableViewController {
                 //let object = objects[indexPath.row] as! NSDate
                 let program = programs[indexPath.row]
                 
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! ProgramDetailViewController
+                let controller =
+                    (segue.destinationViewController as! UINavigationController)
+                        .topViewController as! ProgramDetailViewController
                 
                 controller.detailItem = StructContainer(contained: program)
                 
                 controller.navigationItem.leftBarButtonItem =
-                    self.splitViewController?.displayModeButtonItem()
+                    splitViewController?.displayModeButtonItem()
                 
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -87,28 +86,23 @@ class ProgramMasterViewController: UITableViewController {
     }
 
     // MARK: - Table View
-
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        debugPrint(">> numberOfSectionsInTableView:tableView (\(tableView))")
-//        return 1
-//    }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         debugPrint(">> tableView:tableView:numberOfRowsInSection")
-        //return objects.count
         return programs.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         debugPrint(">> tableView:tableView:cellForRowAtIndexPath")
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         cell.backgroundColor = UIColor.blackColor()
-        //cell.accessoryType = .DetailDisclosureButton
 
-        //let object = objects[indexPath.row] as! NSDate
         let program = programs[indexPath.row]
+        
         cell.textLabel!.text = program.name
         cell.detailTextLabel!.text = program.description
+        
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel!.textColor = UIColor.grayColor()
         
@@ -131,35 +125,6 @@ class ProgramMasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-    
-    //    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        return animals.count
-    //
-    //    }
-    
-    //    override func tableView(
-    //        tableView: UITableView,
-    //        cellForRowAtIndexPath indexPath: NSIndexPath
-    //        ) -> UITableViewCell {
-    //
-    //            let cell:UITableViewCell = UITableViewCell(
-    //                style: UITableViewCellStyle.Subtitle,
-    //                reuseIdentifier: "cell"
-    //            )
-    //
-    //            cell.backgroundColor = UIColor.blackColor()
-    //            //cell.layer.borderWidth = 1
-    //            cell.layer.borderColor = UIColor.grayColor().CGColor
-    //            cell.accessoryType = .DetailDisclosureButton
-    //            cell.tintColor = UIColor(red: 57/255, green: 255/255, blue: 20/255, alpha: 1)
-    //
-    //            cell.textLabel!.text = animals[indexPath.row]
-    //            cell.detailTextLabel!.text = messages[indexPath.row]
-    //            cell.textLabel!.textColor = UIColor.whiteColor()
-    //            cell.detailTextLabel!.textColor = UIColor.grayColor()
-    //
-    //            return cell;
-    //    }
     
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         debugPrint("\(indexPath.row)")

@@ -9,10 +9,10 @@
 import UIKit
 
 class ProgramDetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -23,8 +23,14 @@ class ProgramDetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+            let program = (detail as! StructContainer<GeneralProgram>).contained
+            
+            if let myLabel = nameLabel {
+                myLabel.text = program.name
+            }
+
+            if let myLabel = descriptionLabel {
+                myLabel.text = program.description
             }
         }
     }
@@ -40,7 +46,6 @@ class ProgramDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
