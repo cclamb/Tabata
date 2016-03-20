@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ProgramDetailViewController: UIViewController {
+class ProgramDetailViewController: UIViewController,
+    UIPickerViewDelegate,
+    UIPickerViewDataSource {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var testPicker: UIPickerView!
     
     var detailItem: AnyObject? {
         didSet {

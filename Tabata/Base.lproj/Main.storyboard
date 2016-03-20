@@ -89,13 +89,29 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-Dm-i38">
+                                <rect key="frame" x="20" y="129" width="560" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Ef-ny-O31" id="7qz-Kr-YUT"/>
+                                    <outlet property="delegate" destination="8Ef-ny-O31" id="Hfa-vC-oz1"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-vu-jjv">
+                                <rect key="frame" x="278" y="350" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1dr-RR-cAP" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leadingMargin" id="1p4-TT-WtD"/>
                             <constraint firstItem="1dr-RR-cAP" firstAttribute="top" secondItem="pKZ-Tr-J5H" secondAttribute="bottom" constant="20" id="5lT-Tv-Bhx"/>
+                            <constraint firstItem="RCb-vu-jjv" firstAttribute="top" secondItem="n8L-Dm-i38" secondAttribute="bottom" constant="5" id="FMv-e6-gcn"/>
+                            <constraint firstItem="n8L-Dm-i38" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leadingMargin" id="Kcc-is-aEL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1dr-RR-cAP" secondAttribute="trailing" id="O6b-Rm-boE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kbV-3u-n1j" secondAttribute="trailing" id="cZb-Up-beY"/>
+                            <constraint firstItem="n8L-Dm-i38" firstAttribute="top" secondItem="kbV-3u-n1j" secondAttribute="bottom" constant="5" id="dCZ-Zy-KMl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n8L-Dm-i38" secondAttribute="trailing" id="ii9-3K-wMy"/>
+                            <constraint firstItem="RCb-vu-jjv" firstAttribute="centerX" secondItem="u0u-xh-oCQ" secondAttribute="centerX" id="jr1-eo-oSK"/>
                             <constraint firstItem="kbV-3u-n1j" firstAttribute="leading" secondItem="u0u-xh-oCQ" secondAttribute="leadingMargin" id="kT0-Zq-4KE"/>
                             <constraint firstItem="kbV-3u-n1j" firstAttribute="top" secondItem="1dr-RR-cAP" secondAttribute="bottom" constant="5" id="rbr-zJ-mJj"/>
                         </constraints>
@@ -105,11 +121,12 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="kbV-3u-n1j" id="cg6-mP-dmv"/>
                         <outlet property="nameLabel" destination="1dr-RR-cAP" id="coY-h2-hwp"/>
+                        <outlet property="testPicker" destination="n8L-Dm-i38" id="fyC-cF-75A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mna-fW-bGZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="1498"/>
+            <point key="canvasLocation" x="2873" y="1497"/>
         </scene>
         <!--program-->
         <scene sceneID="jFS-N8-sRz">
