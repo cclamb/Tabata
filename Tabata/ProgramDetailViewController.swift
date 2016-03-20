@@ -49,6 +49,32 @@ class ProgramDetailViewController: UIViewController,
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK:-
+    // MARK: Picker Data Source Methods
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(pickerView: UIPickerView,
+        numberOfRowsInComponent component: Int) -> Int {
+            if component == 0 {
+                return 60
+            } else {
+                return 60
+            }
+    }
+    
+    // MARK: Picker Delegate Methods
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?{
+            return NSAttributedString(
+                string: String(row + 1),
+                attributes: [
+                    NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,
+                    NSForegroundColorAttributeName:UIColor.whiteColor()
+                ]
+            )
+    }
 
 }
 

@@ -89,17 +89,18 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-Dm-i38">
-                                <rect key="frame" x="20" y="129" width="560" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8Ef-ny-O31" id="7qz-Kr-YUT"/>
-                                    <outlet property="delegate" destination="8Ef-ny-O31" id="Hfa-vC-oz1"/>
-                                </connections>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCb-vu-jjv">
                                 <rect key="frame" x="278" y="350" width="44" height="30"/>
                                 <state key="normal" title="Select"/>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-Dm-i38">
+                                <rect key="frame" x="20" y="129" width="560" height="216"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Ef-ny-O31" id="SJi-pG-keb"/>
+                                    <outlet property="delegate" destination="8Ef-ny-O31" id="j36-Zd-PdS"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
