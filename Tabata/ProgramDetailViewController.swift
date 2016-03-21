@@ -9,12 +9,34 @@
 import UIKit
 
 class ProgramDetailViewController: UIViewController,
-    UIPickerViewDelegate,
-    UIPickerViewDataSource {
+    UITableViewDelegate,
+    UITableViewDataSource {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var testPicker: UIPickerView!
+    
+    var program: GeneralProgram? {
+        didSet {
+            if let myProgram = program {
+                values[0] = Double(myProgram.program.count)
+                values[1] = myProgram.program[0].interval / 100
+                values[2] = myProgram.program[1].interval / 100
+            }
+        }
+    }
+    var values = [Double](count: 3, repeatedValue: 0)
+    
+    let fieldTitles = [
+        "Rounds",
+        "Work Set Duration",
+        "Rest Set Duration"
+    ]
+    
+    let suffix = [
+        "rounds",
+        "seconds",
+        "seconds"
+    ]
     
     var detailItem: AnyObject? {
         didSet {
@@ -26,14 +48,14 @@ class ProgramDetailViewController: UIViewController,
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            let program = (detail as! StructContainer<GeneralProgram>).contained
+            program = (detail as! StructContainer<GeneralProgram>).contained
             
             if let myLabel = nameLabel {
-                myLabel.text = program.name
+                myLabel.text = program!.name
             }
 
             if let myLabel = descriptionLabel {
-                myLabel.text = program.description
+                myLabel.text = program!.description
             }
         }
     }
@@ -51,29 +73,38 @@ class ProgramDetailViewController: UIViewController,
     }
     
     // MARK:-
-    // MARK: Picker Data Source Methods
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 2
-    }
-    
-    func pickerView(pickerView: UIPickerView,
-        numberOfRowsInComponent component: Int) -> Int {
-            if component == 0 {
-                return 60
-            } else {
-                return 60
+    // MARK: Table Data Source Methods
+    func tableView(
+        tableView: UITableView,
+        cellForRowAtIndexPath indexPath: NSIndexPath
+        ) -> UITableViewCell {
+            var cell = tableView.dequeueReusableCellWithIdentifier("cell")
+            if (cell == nil) {
+                cell = UITableViewCell(
+                    style: UITableViewCellStyle.Value1,
+                    reuseIdentifier: "cell")
             }
+            
+            cell?.accessoryType = .DisclosureIndicator
+            
+            let idx = indexPath.row
+            cell?.textLabel?.text = "\(     fieldTitles[idx])"
+            cell?.detailTextLabel?.text = "\(Int(values[idx])) \(suffix[idx])"
+            
+            
+            cell?.backgroundColor = UIColor.blackColor()
+            cell?.textLabel?.textColor = UIColor.whiteColor()
+            cell?.detailTextLabel?.textColor = UIColor.grayColor()
+            cell?.detailTextLabel?.font = UIFont.systemFontOfSize(11)
+            
+            return cell!
     }
-    
-    // MARK: Picker Delegate Methods
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?{
-            return NSAttributedString(
-                string: String(row + 1),
-                attributes: [
-                    NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,
-                    NSForegroundColorAttributeName:UIColor.whiteColor()
-                ]
-            )
+
+    func tableView(
+        tableView: UITableView,
+        numberOfRowsInSection section: Int
+        ) -> Int {
+            return 3
     }
 
 }

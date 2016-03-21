@@ -65,7 +65,7 @@ class ProgramMasterViewController: UITableViewController {
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        debugPrint(">> prepareForSeque:seque:sender")
+        debugPrint(">> prepareForSegue:seque:sender")
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 //let object = objects[indexPath.row] as! NSDate
