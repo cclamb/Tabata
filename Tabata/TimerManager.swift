@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Timer
 
 public class TimerManager<K: Hashable, S: Event>: Control {
     

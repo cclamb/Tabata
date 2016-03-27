@@ -1,0 +1,27 @@
+PODS:
+  - Timer (0.1.0)
+  - Utilities (0.0.1)
+
+DEPENDENCIES:
+  - Timer (from `https://github.com/cclamb/Timer`)
+  - Utilities (from `https://github.com/cclamb/Utilities`)
+
+EXTERNAL SOURCES:
+  Timer:
+    :git: https://github.com/cclamb/Timer
+  Utilities:
+    :git: https://github.com/cclamb/Utilities
+
+CHECKOUT OPTIONS:
+  Timer:
+    :commit: 960d867ac71fac93ed4604bf6a2288b7d2720a94
+    :git: https://github.com/cclamb/Timer
+  Utilities:
+    :commit: b179e83187b86711e5189e82fc9559be410025c2
+    :git: https://github.com/cclamb/Utilities
+
+SPEC CHECKSUMS:
+  Timer: 526e823e17126e9b26b5f470e80f8b80eb3122c4
+  Utilities: e75de98b95346d72aa542586aac72e197d266e40
+
+COCOAPODS: 0.39.0

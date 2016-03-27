@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Timer
+import Utilities
 
 class ProgramDetailViewController: UIViewController,
     UITableViewDelegate,

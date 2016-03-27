@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Timer
 
 class TimerViewController: UIViewController {
     
