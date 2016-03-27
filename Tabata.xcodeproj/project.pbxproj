@@ -9,25 +9,8 @@
 /* Begin PBXBuildFile section */
 		AC0C4CA81CA76083007968B4 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C4CA71CA76082007968B4 /* TimerTests.swift */; };
 		AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */; };
-		AC7C88901C92314300E6422A /* GeneralObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888E1C92314300E6422A /* GeneralObserver.swift */; };
-		AC7C88911C92314300E6422A /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888F1C92314300E6422A /* Observer.swift */; };
-		AC7C889D1C92323F00E6422A /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88921C92323F00E6422A /* Control.swift */; };
-		AC7C889E1C92323F00E6422A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88931C92323F00E6422A /* Event.swift */; };
-		AC7C889F1C92323F00E6422A /* GeneralInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88941C92323F00E6422A /* GeneralInterval.swift */; };
-		AC7C88A01C92323F00E6422A /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88951C92323F00E6422A /* Interval.swift */; };
-		AC7C88A11C92323F00E6422A /* ProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88961C92323F00E6422A /* ProgramManager.swift */; };
-		AC7C88A21C92323F00E6422A /* ProgramStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88971C92323F00E6422A /* ProgramStatus.swift */; };
-		AC7C88A31C92323F00E6422A /* RestInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88981C92323F00E6422A /* RestInterval.swift */; };
-		AC7C88A41C92323F00E6422A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88991C92323F00E6422A /* Timer.swift */; };
-		AC7C88A51C92323F00E6422A /* TimerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889A1C92323F00E6422A /* TimerEvent.swift */; };
-		AC7C88A61C92323F00E6422A /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889B1C92323F00E6422A /* TimerState.swift */; };
-		AC7C88A71C92323F00E6422A /* WorkInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C889C1C92323F00E6422A /* WorkInterval.swift */; };
-		AC7C88A91C939A1E00E6422A /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88A81C939A1E00E6422A /* Program.swift */; };
-		AC7C88AB1C939AB200E6422A /* TimerProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C88AA1C939AB200E6422A /* TimerProgram.swift */; };
 		AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */; };
 		AC83FA831C9A4E1D00A5EC0C /* ProgramMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */; };
-		AC83FA871C9B35AA00A5EC0C /* ProgramFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA861C9B35AA00A5EC0C /* ProgramFactory.swift */; };
-		AC83FA8A1C9B40E500A5EC0C /* StructContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA891C9B40E500A5EC0C /* StructContainer.swift */; };
 		ACB874491C9A35AE002FDF83 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB874481C9A35AE002FDF83 /* SplitViewController.swift */; };
 		ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE31231C95B9F100C04369 /* TimerViewManager.swift */; };
 		ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */; };
@@ -61,25 +44,8 @@
 /* Begin PBXFileReference section */
 		AC0C4CA71CA76082007968B4 /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
 		AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
-		AC7C888E1C92314300E6422A /* GeneralObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralObserver.swift; sourceTree = "<group>"; };
-		AC7C888F1C92314300E6422A /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
-		AC7C88921C92323F00E6422A /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
-		AC7C88931C92323F00E6422A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		AC7C88941C92323F00E6422A /* GeneralInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralInterval.swift; sourceTree = "<group>"; };
-		AC7C88951C92323F00E6422A /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
-		AC7C88961C92323F00E6422A /* ProgramManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramManager.swift; sourceTree = "<group>"; };
-		AC7C88971C92323F00E6422A /* ProgramStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramStatus.swift; sourceTree = "<group>"; };
-		AC7C88981C92323F00E6422A /* RestInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestInterval.swift; sourceTree = "<group>"; };
-		AC7C88991C92323F00E6422A /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
-		AC7C889A1C92323F00E6422A /* TimerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEvent.swift; sourceTree = "<group>"; };
-		AC7C889B1C92323F00E6422A /* TimerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
-		AC7C889C1C92323F00E6422A /* WorkInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkInterval.swift; sourceTree = "<group>"; };
-		AC7C88A81C939A1E00E6422A /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
-		AC7C88AA1C939AB200E6422A /* TimerProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerProgram.swift; sourceTree = "<group>"; };
 		AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewController.swift; sourceTree = "<group>"; };
 		AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramMasterViewController.swift; sourceTree = "<group>"; };
-		AC83FA861C9B35AA00A5EC0C /* ProgramFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramFactory.swift; sourceTree = "<group>"; };
-		AC83FA891C9B40E500A5EC0C /* StructContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructContainer.swift; sourceTree = "<group>"; };
 		ACB874481C9A35AE002FDF83 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		ACBE31231C95B9F100C04369 /* TimerViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewManager.swift; sourceTree = "<group>"; };
 		ACC90E781C87AF1000A5B0F9 /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,122 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC83FA881C9B40C900A5EC0C /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				AC83FA891C9B40E500A5EC0C /* StructContainer.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		ACBE31151C95B85D00C04369 /* Event */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE311A1C95B8EE00C04369 /* Impl */,
-				ACBE31191C95B8E600C04369 /* Protocols */,
-			);
-			name = Event;
-			sourceTree = "<group>";
-		};
-		ACBE31161C95B88600C04369 /* Program */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE31181C95B8C000C04369 /* Impl */,
-				ACBE31171C95B8B700C04369 /* Protocols */,
-			);
-			name = Program;
-			sourceTree = "<group>";
-		};
-		ACBE31171C95B8B700C04369 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C88A81C939A1E00E6422A /* Program.swift */,
-				AC7C88951C92323F00E6422A /* Interval.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		ACBE31181C95B8C000C04369 /* Impl */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C889C1C92323F00E6422A /* WorkInterval.swift */,
-				AC7C88AA1C939AB200E6422A /* TimerProgram.swift */,
-				AC7C88981C92323F00E6422A /* RestInterval.swift */,
-				AC7C88971C92323F00E6422A /* ProgramStatus.swift */,
-				AC7C88961C92323F00E6422A /* ProgramManager.swift */,
-				AC7C88941C92323F00E6422A /* GeneralInterval.swift */,
-				AC83FA861C9B35AA00A5EC0C /* ProgramFactory.swift */,
-			);
-			name = Impl;
-			sourceTree = "<group>";
-		};
-		ACBE31191C95B8E600C04369 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C88931C92323F00E6422A /* Event.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		ACBE311A1C95B8EE00C04369 /* Impl */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C889A1C92323F00E6422A /* TimerEvent.swift */,
-			);
-			name = Impl;
-			sourceTree = "<group>";
-		};
-		ACBE311B1C95B90800C04369 /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE311D1C95B91D00C04369 /* Impl */,
-				ACBE311C1C95B90E00C04369 /* Protocol */,
-			);
-			name = Timer;
-			sourceTree = "<group>";
-		};
-		ACBE311C1C95B90E00C04369 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C88921C92323F00E6422A /* Control.swift */,
-			);
-			name = Protocol;
-			sourceTree = "<group>";
-		};
-		ACBE311D1C95B91D00C04369 /* Impl */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C88991C92323F00E6422A /* Timer.swift */,
-				AC7C889B1C92323F00E6422A /* TimerState.swift */,
-			);
-			name = Impl;
-			sourceTree = "<group>";
-		};
-		ACBE311E1C95B94E00C04369 /* Observer */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE31201C95B95F00C04369 /* Impl */,
-				ACBE311F1C95B95700C04369 /* Protocol */,
-			);
-			name = Observer;
-			sourceTree = "<group>";
-		};
-		ACBE311F1C95B95700C04369 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C888F1C92314300E6422A /* Observer.swift */,
-			);
-			name = Protocol;
-			sourceTree = "<group>";
-		};
-		ACBE31201C95B95F00C04369 /* Impl */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C888E1C92314300E6422A /* GeneralObserver.swift */,
-			);
-			name = Impl;
-			sourceTree = "<group>";
-		};
 		ACBE31211C95B9B900C04369 /* ViewManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +109,6 @@
 		ACC90E6F1C87AF1000A5B0F9 = {
 			isa = PBXGroup;
 			children = (
-				ACC90F0D1C87C8E400A5B0F9 /* Timer */,
 				ACC90E7A1C87AF1000A5B0F9 /* Tabata */,
 				ACC90E921C87AF1100A5B0F9 /* TabataTests */,
 				ACC90E9D1C87AF1100A5B0F9 /* TabataUITests */,
@@ -280,7 +129,6 @@
 		ACC90E7A1C87AF1000A5B0F9 /* Tabata */ = {
 			isa = PBXGroup;
 			children = (
-				AC83FA881C9B40C900A5EC0C /* Utilities */,
 				ACBE31221C95B9CB00C04369 /* ResourceManager */,
 				ACBE31211C95B9B900C04369 /* ViewManager */,
 				ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */,
@@ -315,17 +163,6 @@
 				ACC90EA01C87AF1100A5B0F9 /* Info.plist */,
 			);
 			path = TabataUITests;
-			sourceTree = "<group>";
-		};
-		ACC90F0D1C87C8E400A5B0F9 /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				ACBE311E1C95B94E00C04369 /* Observer */,
-				ACBE311B1C95B90800C04369 /* Timer */,
-				ACBE31161C95B88600C04369 /* Program */,
-				ACBE31151C95B85D00C04369 /* Event */,
-			);
-			name = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,30 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */,
-				AC7C88A91C939A1E00E6422A /* Program.swift in Sources */,
 				AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */,
-				AC7C88901C92314300E6422A /* GeneralObserver.swift in Sources */,
-				AC7C88AB1C939AB200E6422A /* TimerProgram.swift in Sources */,
-				AC7C88911C92314300E6422A /* Observer.swift in Sources */,
-				AC7C88A01C92323F00E6422A /* Interval.swift in Sources */,
-				AC7C88A31C92323F00E6422A /* RestInterval.swift in Sources */,
 				AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */,
 				ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */,
-				AC7C88A11C92323F00E6422A /* ProgramManager.swift in Sources */,
-				AC83FA871C9B35AA00A5EC0C /* ProgramFactory.swift in Sources */,
 				AC83FA831C9A4E1D00A5EC0C /* ProgramMasterViewController.swift in Sources */,
-				AC7C88A41C92323F00E6422A /* Timer.swift in Sources */,
-				AC7C889F1C92323F00E6422A /* GeneralInterval.swift in Sources */,
-				AC7C889E1C92323F00E6422A /* Event.swift in Sources */,
-				AC7C88A21C92323F00E6422A /* ProgramStatus.swift in Sources */,
 				ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */,
-				AC7C889D1C92323F00E6422A /* Control.swift in Sources */,
-				AC7C88A61C92323F00E6422A /* TimerState.swift in Sources */,
 				ACC90E841C87AF1000A5B0F9 /* Tabata.xcdatamodeld in Sources */,
-				AC7C88A71C92323F00E6422A /* WorkInterval.swift in Sources */,
 				ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */,
-				AC83FA8A1C9B40E500A5EC0C /* StructContainer.swift in Sources */,
-				AC7C88A51C92323F00E6422A /* TimerEvent.swift in Sources */,
 				ACB874491C9A35AE002FDF83 /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
