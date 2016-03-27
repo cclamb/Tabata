@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Timer
 @testable import Tabata
 
 class TabataTests: XCTestCase {
