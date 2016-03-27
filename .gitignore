@@ -23,6 +23,9 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 
+## Generated Workspacer
+*.xcworkspace
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
