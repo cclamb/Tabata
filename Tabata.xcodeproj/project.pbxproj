@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0C4CA81CA76083007968B4 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C4CA71CA76082007968B4 /* TimerTests.swift */; };
 		AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */; };
 		AC7C88901C92314300E6422A /* GeneralObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888E1C92314300E6422A /* GeneralObserver.swift */; };
 		AC7C88911C92314300E6422A /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888F1C92314300E6422A /* Observer.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0C4CA71CA76082007968B4 /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
 		AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		AC7C888E1C92314300E6422A /* GeneralObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralObserver.swift; sourceTree = "<group>"; };
 		AC7C888F1C92314300E6422A /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				ACC90E931C87AF1100A5B0F9 /* TabataTests.swift */,
 				ACC90E951C87AF1100A5B0F9 /* Info.plist */,
+				AC0C4CA71CA76082007968B4 /* TimerTests.swift */,
 			);
 			path = TabataTests;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC90E941C87AF1100A5B0F9 /* TabataTests.swift in Sources */,
+				AC0C4CA81CA76083007968B4 /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,26 +8,28 @@
 
 import Foundation
 
-public class TimerManager: Control {
+public class TimerManager<K: Hashable, S: Event>: Control {
+    
+    typealias I = S.IntervalType
     
     private var timers: [Control] = []
-
-    public func createTimer<K: Hashable,S: Event,I where S.IntervalType == I>(
+    
+    public func createTimer(
         program: TimerProgram<I>,
         interval: NSTimeInterval = 0.01,
         firePolicy: Timer<K,S,I>.TimerPolicy? = nil
-    ) -> Timer<K,S,I> {
-        var timer: Timer<K,S,I>!
-        if let myFirePolicy = firePolicy {
-            timer = Timer<K,S,I>(program: program, interval: interval, firePolicy: myFirePolicy)
-        } else {
-            timer = Timer<K,S,I>(program: program, interval: interval)
-        }
-        timers.append(timer)
-        return timer;
+        ) -> Timer<K,S,I> {
+            var timer: Timer<K,S,I>!
+            if let myFirePolicy = firePolicy {
+                timer = Timer<K,S,I>(program: program, interval: interval, firePolicy: myFirePolicy)
+            } else {
+                timer = Timer<K,S,I>(program: program, interval: interval)
+            }
+            timers.append(timer!)
+            return timer;
     }
     
-    public func deleteTimer<K: Hashable,S: Event,I where S.IntervalType == I>(
+    public func deleteTimer(
         timer: Timer<K,S,I>
     ) {
         timer.stop()

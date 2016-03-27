@@ -11,6 +11,26 @@ import XCTest
 
 class TabataTests: XCTestCase {
     
+    var program = TimerProgram(
+        name: "Test Program",
+        description: "Some test program",
+        program: [
+            WorkInterval(interval: 20 * 100, description: "work"),
+            RestInterval(interval: 10 * 100, description: "rest"),
+            WorkInterval(interval: 20 * 100, description: "work"),
+            RestInterval(interval: 10 * 100, description: "rest"),
+            WorkInterval(interval: 20 * 100, description: "work"),
+            RestInterval(interval: 10 * 100, description: "rest"),
+            WorkInterval(interval: 20 * 100, description: "work"),
+            RestInterval(interval: 10 * 100, description: "rest"),
+            WorkInterval(interval: 20 * 100, description: "work"),
+            RestInterval(interval: 10 * 100, description: "rest"),
+            WorkInterval(interval: 20 * 100, description: "work"),
+            RestInterval(interval: 10 * 100, description: "rest"),
+        ])
+    
+    var timerManager = TimerManager<String,TimerEvent<GeneralInterval>>()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,16 +41,27 @@ class TabataTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTimerCreation() {
+        let timer = timerManager.createTimer(program)
+        XCTAssertNotNil(timer)
+        timerManager.deleteTimer(timer)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testTimer() {
+        let timer = timerManager.createTimer(program)
+        let expectation = expectationWithDescription("events are fired")
+        var callbackCnt = 0
+        timer.addObserver("obs") { _ -> Void in
+            callbackCnt++
+            if callbackCnt > 5 {
+                expectation.fulfill()
+            }
         }
+        timer.start()
+        waitForExpectationsWithTimeout(50) { _ -> Void in
+            timer.stop()
+        }
+        timerManager.deleteTimer(timer)
     }
     
 }

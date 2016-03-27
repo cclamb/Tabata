@@ -29,33 +29,20 @@ class TimerViewController: UIViewController {
     ])
     
    
-    var timerManager = TimerManager()
+    //var timerManager = TimerManager()
     
     var currentTimer: Timer<String,TimerEvent<GeneralInterval>,GeneralInterval>?
     
-//    @IBOutlet weak var millisecondLabel: UILabel!
-//    
-//    @IBOutlet weak var nameLabel: UILabel!
-//    
-//    @IBOutlet weak var timeLabel: UILabel!
-//    
-//    @IBOutlet weak var stopButton: UIButton!
-//    
-//    @IBOutlet weak var startButton: UIButton!
-//    
-//    @IBOutlet weak var restartButton: UIButton!
-//    
-//    @IBOutlet weak var resetButton: UIButton!
     
-    @IBAction func stopButtonPressed(sender: UIButton) {
-        debugPrint("stopButtonPressed:sender")
-        if let myCurrentTimer = currentTimer {
-            myCurrentTimer.stop()
-        }
-    }
-    
-    @IBAction func startButtonPressed(sender: UIButton) {
-        debugPrint("startButtonPressed:sender")
+//    @IBAction func stopButtonPressed(sender: UIButton) {
+//        debugPrint("stopButtonPressed:sender")
+//        if let myCurrentTimer = currentTimer {
+//            myCurrentTimer.stop()
+//        }
+//    }
+//    
+//    @IBAction func startButtonPressed(sender: UIButton) {
+//        debugPrint("startButtonPressed:sender")
 //        if let myCurrentTimer = currentTimer {
 //            timerManager.deleteTimer(myCurrentTimer)
 //        }
@@ -63,15 +50,15 @@ class TimerViewController: UIViewController {
 //        currentTimer = timerManager.createTimer(program)
 //        currentTimer!.start()
 //        currentTimer!.addObserver("vc_1", observer: self.notify)
-    }
-    
-    @IBAction func restartButtonPressed(sender: UIButton) {
-        debugPrint("restartButtonPressed:sender")
-    }
-    
-    @IBAction func resetButtonPressed(sender: UIButton) {
-        debugPrint("resetButtonPressed:sender")
-    }
+//    }
+//    
+//    @IBAction func restartButtonPressed(sender: UIButton) {
+//        debugPrint("restartButtonPressed:sender")
+//    }
+//    
+//    @IBAction func resetButtonPressed(sender: UIButton) {
+//        debugPrint("resetButtonPressed:sender")
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +75,11 @@ class TimerViewController: UIViewController {
         return .LightContent
     }
     
+    // MARK:-
+    // MARK: View action handlers
+    
+    // MARK:-
+    // MARK: Observer callback support
     private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {
         
         let format = {(value: Int) in

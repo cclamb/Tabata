@@ -19,8 +19,11 @@ class ProgramDetailViewController: UIViewController,
         didSet {
             if let myProgram = program {
                 values[0] = Double(myProgram.program.count)
-                values[1] = myProgram.program[0].interval / 100
-                values[2] = myProgram.program[1].interval / 100
+                
+                if myProgram.program.count >= 3 {
+                    values[1] = myProgram.program[0].interval / 100
+                    values[2] = myProgram.program[1].interval / 100
+                }
             }
         }
     }
