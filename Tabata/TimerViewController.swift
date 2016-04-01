@@ -13,26 +13,27 @@ class TimerViewController: UIViewController {
     
     var program = TimerProgram(
         name: "Test Program",
-        description: "Some test program", 
+        description: "Some test program",
         program: [
-        WorkInterval(interval: 20 * 100, description: "work"),
-        RestInterval(interval: 10 * 100, description: "rest"),
-        WorkInterval(interval: 20 * 100, description: "work"),
-        RestInterval(interval: 10 * 100, description: "rest"),
-        WorkInterval(interval: 20 * 100, description: "work"),
-        RestInterval(interval: 10 * 100, description: "rest"),
-        WorkInterval(interval: 20 * 100, description: "work"),
-        RestInterval(interval: 10 * 100, description: "rest"),
-        WorkInterval(interval: 20 * 100, description: "work"),
-        RestInterval(interval: 10 * 100, description: "rest"),
-        WorkInterval(interval: 20 * 100, description: "work"),
-        RestInterval(interval: 10 * 100, description: "rest"),
-    ])
+            WorkInterval(description: "work", seconds: 20),
+            RestInterval(description: "rest", seconds: 10),
+            WorkInterval(description: "work", seconds: 20),
+            RestInterval(description: "rest", seconds: 10),
+            WorkInterval(description: "work", seconds: 20),
+            RestInterval(description: "rest", seconds: 10),
+            WorkInterval(description: "work", seconds: 20),
+            RestInterval(description: "rest", seconds: 10),
+            WorkInterval(description: "work", seconds: 20),
+            RestInterval(description: "rest", seconds: 10),
+            WorkInterval(description: "work", seconds: 20),
+            RestInterval(description: "rest", seconds: 10)
+        ]
+    )
     
    
     //var timerManager = TimerManager()
     
-    var currentTimer: Timer<String,TimerEvent<GeneralInterval>,GeneralInterval>?
+    var currentTimer: Timer<String,TimerEvent<GeneralInterval>>?
     
     
 //    @IBAction func stopButtonPressed(sender: UIButton) {

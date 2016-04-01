@@ -18,24 +18,24 @@ public class TimerManager<K: Hashable, S: Event>: Control {
     public func createTimer(
         program: TimerProgram<I>,
         interval: NSTimeInterval = 0.01,
-        firePolicy: Timer<K,S,I>.TimerPolicy? = nil
-        ) -> Timer<K,S,I> {
-            var timer: Timer<K,S,I>!
+        firePolicy: Timer<K,S>.TimerPolicy? = nil
+        ) -> Timer<K,S> {
+            var timer: Timer<K,S>!
             if let myFirePolicy = firePolicy {
-                timer = Timer<K,S,I>(program: program, interval: interval, firePolicy: myFirePolicy)
+                timer = Timer<K,S>(program: program, interval: interval, firePolicy: myFirePolicy)
             } else {
-                timer = Timer<K,S,I>(program: program, interval: interval)
+                timer = Timer<K,S>(program: program, interval: interval)
             }
             timers.append(timer!)
             return timer;
     }
     
     public func deleteTimer(
-        timer: Timer<K,S,I>
+        timer: Timer<K,S>
     ) {
         timer.stop()
         let idx = timers.indexOf {
-            let ctrl: Timer<K,S,I>? = $0 as? Timer<K,S,I>
+            let ctrl: Timer<K,S>? = $0 as? Timer<K,S>
             if let myControl = ctrl {
                 return myControl === timer
             } else {
