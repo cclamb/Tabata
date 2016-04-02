@@ -34,7 +34,7 @@
         <!--View Controller-->
         <scene sceneID="evy-0Z-fqS">
             <objects>
-                <tabBarController id="2oe-cj-hGe" customClass="ViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="viewController" id="2oe-cj-hGe" customClass="ViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="cb6-ZK-B5C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

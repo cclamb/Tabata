@@ -20,6 +20,7 @@ class ProgramDetailViewController: UIViewController,
     
     @IBAction func runButtonPressed(sender: AnyObject) {
         debugPrint("run button pressed...")
+        tabBarController?.selectedIndex = 0
     }
     
     var program: GeneralProgram? {
