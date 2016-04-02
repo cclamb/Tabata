@@ -16,6 +16,11 @@ class ProgramDetailViewController: UIViewController,
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var runButton: UIButton!
+    
+    @IBAction func runButtonPressed(sender: AnyObject) {
+        debugPrint("run button pressed...")
+    }
     
     var program: GeneralProgram? {
         didSet {
