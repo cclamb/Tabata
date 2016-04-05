@@ -30,42 +30,37 @@ class TimerViewController: UIViewController {
         ]
     )
     
+    let ironColor = UIColor(
+        red: 76/255.0,
+        green: 76/255.0,
+        blue: 76/255.0,
+        alpha: 1.0
+    )
+    
+    let tintColor = UIColor(
+        red: 57/255.0,
+        green: 255/255.0,
+        blue: 20/255.0,
+        alpha: 1.0
+    )
+    
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
    
     //var timerManager = TimerManager()
     
     var currentTimer: Timer<String,TimerEvent<GeneralInterval>>?
     
-    
-//    @IBAction func stopButtonPressed(sender: UIButton) {
-//        debugPrint("stopButtonPressed:sender")
-//        if let myCurrentTimer = currentTimer {
-//            myCurrentTimer.stop()
-//        }
-//    }
-//    
-//    @IBAction func startButtonPressed(sender: UIButton) {
-//        debugPrint("startButtonPressed:sender")
-//        if let myCurrentTimer = currentTimer {
-//            timerManager.deleteTimer(myCurrentTimer)
-//        }
-//        nameLabel.text = program.name
-//        currentTimer = timerManager.createTimer(program)
-//        currentTimer!.start()
-//        currentTimer!.addObserver("vc_1", observer: self.notify)
-//    }
-//    
-//    @IBAction func restartButtonPressed(sender: UIButton) {
-//        debugPrint("restartButtonPressed:sender")
-//    }
-//    
-//    @IBAction func resetButtonPressed(sender: UIButton) {
-//        debugPrint("resetButtonPressed:sender")
-//    }
-    
+    // MARK:-
+    // MARK: Overriden controller methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        startButton.layer.cornerRadius = 5
+        stopButton.layer.cornerRadius = 5
+        resetButton.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,7 +74,23 @@ class TimerViewController: UIViewController {
     
     // MARK:-
     // MARK: View action handlers
+    @IBAction func startButtonPressed(sender: UIButton) {
+        UIView.animateWithDuration(0.15) {
+            self.startButton.backgroundColor = UIColor.greenColor()
+            self.startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.stopButton.backgroundColor = UIColor.redColor()
+            self.stopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        }
+    }
     
+    @IBAction func stopButtonPressed(sender: UIButton) {
+        UIView.animateWithDuration(0.15) {
+            self.startButton.backgroundColor = self.ironColor
+            self.startButton.setTitleColor(self.tintColor, forState: .Normal)
+            self.stopButton.backgroundColor = self.ironColor
+            self.stopButton.setTitleColor(self.tintColor, forState: .Normal)
+        }
+    }
     // MARK:-
     // MARK: Observer callback support
     private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {

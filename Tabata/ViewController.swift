@@ -13,7 +13,9 @@ class ViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        selectedIndex = 1
+        // TODO: Set the default index; this will need to be set
+        // programmatically in the future
+        selectedIndex = 0
     }
 
     override func didReceiveMemoryWarning() {
