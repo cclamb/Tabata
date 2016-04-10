@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     // MARK: - UISplitViewController support
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
-        debugPrint("AppDelegate::splitViewController(.)")
+        debugPrint("++++>> AppDelegate::splitViewController(.)")
         guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
         guard let topAsDetailController = secondaryAsNavController.topViewController as? ProgramDetailViewController else { return false }
         if topAsDetailController.detailItem == nil {

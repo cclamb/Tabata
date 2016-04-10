@@ -11,6 +11,8 @@ import Timer
 
 class TimerViewController: UIViewController {
     
+    let AnimationDuration = 0.15
+    
     var program = TimerProgram(
         name: "Test Program",
         description: "Some test program",
@@ -53,6 +55,7 @@ class TimerViewController: UIViewController {
     let timerManager = SimpleTimerManager()
     
     var currentTimer: SimpleTimer?
+    var isRunning = false
     
     // MARK:-
     // MARK: Overriden controller methods
@@ -80,30 +83,51 @@ class TimerViewController: UIViewController {
     // MARK:-
     // MARK: View action handlers
     @IBAction func startButtonPressed(sender: UIButton) {
-        UIView.animateWithDuration(0.15) {
-            self.startButton.backgroundColor = UIColor.greenColor()
-            self.startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            self.stopButton.backgroundColor = UIColor.redColor()
-            self.stopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        if isRunning == false {
+            UIView.animateWithDuration(AnimationDuration) {
+                self.startButton.backgroundColor = UIColor.greenColor()
+                self.startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.stopButton.backgroundColor = UIColor.redColor()
+                self.stopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.resetButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.resetButton.backgroundColor = UIColor.blueColor()
+            }
+            if let myTimer = currentTimer {
+                myTimer.stop()
+            } else {
+                currentTimer = timerManager.createTimer(program)
+                currentTimer?.addObserver("currentTimer", observer: self.notify)
+            }
+            currentTimer!.start()
+            isRunning = true
         }
-        currentTimer = timerManager.createTimer(program)
-        currentTimer?.addObserver("currentTimer", observer: self.notify)
-        currentTimer!.start()
     }
     
     @IBAction func stopButtonPressed(sender: UIButton) {
-        UIView.animateWithDuration(0.15) {
+        if isRunning == true {
+            UIView.animateWithDuration(AnimationDuration) {
+                self.startButton.backgroundColor = self.ironColor
+                self.startButton.setTitleColor(self.tintColor, forState: .Normal)
+                self.stopButton.backgroundColor = self.ironColor
+                self.stopButton.setTitleColor(self.tintColor, forState: .Normal)
+            }
+            currentTimer?.stop()
+            isRunning = false
+        }
+    }
+    
+    @IBAction func resetButtonPressed(sender: UIButton) {
+        UIView.animateWithDuration(AnimationDuration) {
             self.startButton.backgroundColor = self.ironColor
             self.startButton.setTitleColor(self.tintColor, forState: .Normal)
             self.stopButton.backgroundColor = self.ironColor
             self.stopButton.setTitleColor(self.tintColor, forState: .Normal)
+            self.resetButton.setTitleColor(self.tintColor, forState: .Normal)
+            self.resetButton.backgroundColor = self.ironColor
         }
-        currentTimer?.stop()
-    }
-    
-    @IBAction func resetButtonPressed(sender: UIButton) {
         currentTimer?.reset()
         updateTimeLabels(program.program[0].interval)
+        isRunning = false
     }
     // MARK:-
     // MARK: Observer callback support
