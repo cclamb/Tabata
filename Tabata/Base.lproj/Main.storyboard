@@ -44,6 +44,9 @@
                                         <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="reset"/>
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="Fov-sH-bsw" eventType="touchUpInside" id="FIL-wM-pm9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -52,12 +55,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="220"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r91-SO-Eja">
                                 <rect key="frame" x="427" y="20" width="92" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,9 +94,11 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
+                        <outlet property="millisecondLabel" destination="r91-SO-Eja" id="cRd-GJ-I0F"/>
                         <outlet property="resetButton" destination="Usv-db-MIj" id="Qec-UB-WgX"/>
                         <outlet property="startButton" destination="Zw5-Sf-G8w" id="Umt-pf-rMY"/>
                         <outlet property="stopButton" destination="NC2-3e-0d7" id="tdU-q0-3fA"/>
+                        <outlet property="timeLabel" destination="pqD-wv-nlT" id="d1D-Ru-3rP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbe-HY-XwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -254,9 +271,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="oJp-qT-uGz" kind="showDetail" identifier="showDetail" id="4Kk-iA-qUs">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <segue destination="oJp-qT-uGz" kind="showDetail" identifier="showDetail" id="7oS-vp-q1H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -297,7 +312,7 @@
         <image name="Timer" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Kk-iA-qUs"/>
+        <segue reference="7oS-vp-q1H"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.22352941176470587" green="1" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
 </document>

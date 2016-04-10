@@ -10,13 +10,25 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let rootController = window!.rootViewController as! UITabBarController
+        rootController.viewControllers?.forEach() {
+            debugPrint("(1) ==> \($0)")
+        }
+        let splitViewController = rootController.viewControllers?[1] as! UISplitViewController
+        splitViewController.viewControllers.forEach() {
+            debugPrint("(2) ==> \($0)")
+        }
+        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+        splitViewController.delegate = self
+        
         return true
     }
 
@@ -42,6 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    // MARK: - UISplitViewController support
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
+        debugPrint("AppDelegate::splitViewController(.)")
+        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
+        guard let topAsDetailController = secondaryAsNavController.topViewController as? ProgramDetailViewController else { return false }
+        if topAsDetailController.detailItem == nil {
+            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+            return true
+        }
+        return false
     }
 
     // MARK: - Core Data stack

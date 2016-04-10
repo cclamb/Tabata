@@ -65,3 +65,7 @@ public class TimerManager<K: Hashable, S: Event>: Control {
         timers.forEach {(var control: Control) in control.reset() }
     }
 }
+
+typealias SimpleEvent = TimerEvent<GeneralInterval>
+typealias SimpleTimer = Timer<String,SimpleEvent>
+typealias SimpleTimerManager = TimerManager<String,SimpleEvent>

@@ -47,10 +47,12 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var millisecondLabel: UILabel!
    
-    //var timerManager = TimerManager()
+    let timerManager = SimpleTimerManager()
     
-    var currentTimer: Timer<String,TimerEvent<GeneralInterval>>?
+    var currentTimer: SimpleTimer?
     
     // MARK:-
     // MARK: Overriden controller methods
@@ -61,6 +63,9 @@ class TimerViewController: UIViewController {
         startButton.layer.cornerRadius = 5
         stopButton.layer.cornerRadius = 5
         resetButton.layer.cornerRadius = 5
+        
+        let startingInterval = program.program[0].interval
+        updateTimeLabels(startingInterval)
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,6 +86,9 @@ class TimerViewController: UIViewController {
             self.stopButton.backgroundColor = UIColor.redColor()
             self.stopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         }
+        currentTimer = timerManager.createTimer(program)
+        currentTimer?.addObserver("currentTimer", observer: self.notify)
+        currentTimer!.start()
     }
     
     @IBAction func stopButtonPressed(sender: UIButton) {
@@ -90,33 +98,45 @@ class TimerViewController: UIViewController {
             self.stopButton.backgroundColor = self.ironColor
             self.stopButton.setTitleColor(self.tintColor, forState: .Normal)
         }
+        currentTimer?.stop()
+    }
+    
+    @IBAction func resetButtonPressed(sender: UIButton) {
+        currentTimer?.reset()
+        updateTimeLabels(program.program[0].interval)
     }
     // MARK:-
     // MARK: Observer callback support
     private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {
+
+        updateTimeLabels(event.intervalsRemaining)
+        
+//        if let myCurrentInterval = event.currentInterval {
+//            messageLabel.text = myCurrentInterval.description
+//        }
+    }
+    
+    private func updateTimeLabels(interval: NSTimeInterval) {
         
         let format = {(value: Int) in
             return value < 10
                 ? String(format: "0%d", value)
                 : String(format: "%d", value)
         }
-
         
-        let intervals = event.intervalsElapsed
+        let intervals = interval
         let minutes = 0
         let seconds = Int(intervals) / 100
         let milliSeconds = Int(intervals) - seconds * 100
         let formattedMillis = format(milliSeconds)
         let formattedMinutes = format(minutes)
         let formattedSeconds = format(seconds)
-        let time = " \(formattedMinutes):\(formattedSeconds) "
-        let millisecondTime = " \(formattedMillis) "
-        debugPrint(" \(time):\(millisecondTime) ")
-//        timeLabel!.text = time
-//        millisecondLabel.text = millisecondTime
-//        if let myCurrentInterval = event.currentInterval {
-//            messageLabel.text = myCurrentInterval.description
-//        }
+        let time = "\(formattedMinutes):\(formattedSeconds)"
+        let millisecondTime = "\(formattedMillis)"
+        //debugPrint(" \(time):\(millisecondTime) ")
+        debugPrint("\(interval)")
+        timeLabel!.text = time
+        millisecondLabel.text = millisecondTime
     }
     
 
