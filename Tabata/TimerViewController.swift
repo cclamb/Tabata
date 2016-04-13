@@ -51,6 +51,8 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var millisecondLabel: UILabel!
+    @IBOutlet weak var programNameLabel: UILabel!
+    @IBOutlet weak var intervalNameLabel: UILabel!
    
     let timerManager = SimpleTimerManager()
     
@@ -84,6 +86,7 @@ class TimerViewController: UIViewController {
     // MARK: View action handlers
     @IBAction func startButtonPressed(sender: UIButton) {
         if isRunning == false {
+            programNameLabel.text = program.name
             UIView.animateWithDuration(AnimationDuration) {
                 self.startButton.backgroundColor = UIColor.greenColor()
                 self.startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -136,6 +139,7 @@ class TimerViewController: UIViewController {
     // MARK: Observer callback support
     private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {
 
+        intervalNameLabel.text = event.program.program[event.programIndex].description
         updateTimeLabels(event.intervalsRemaining)
         
 //        if let myCurrentInterval = event.currentInterval {
