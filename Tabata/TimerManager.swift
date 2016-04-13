@@ -57,12 +57,8 @@ public class TimerManager<K: Hashable, S: Event>: Control {
         timers.forEach {(var control: Control) in control.stop() }
     }
     
-    public func restart() {
-        timers.forEach {(var control: Control) in control.restart() }
-    }
-    
     public func reset() {
-        timers.forEach {(var control: Control) in control.reset() }
+        assertionFailure()
     }
 }
 

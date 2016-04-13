@@ -125,10 +125,13 @@ class TimerViewController: UIViewController {
             self.resetButton.setTitleColor(self.tintColor, forState: .Normal)
             self.resetButton.backgroundColor = self.ironColor
         }
-        currentTimer?.reset()
+        currentTimer!.stop()
+        currentTimer = timerManager.createTimer(program)
+        currentTimer?.addObserver("currentTimer", observer: self.notify)
         updateTimeLabels(program.program[0].interval)
         isRunning = false
     }
+    
     // MARK:-
     // MARK: Observer callback support
     private func notify<S: Event, I: Interval where S.IntervalType == I>(event: S) {
