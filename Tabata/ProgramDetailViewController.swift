@@ -18,8 +18,12 @@ class ProgramDetailViewController: UIViewController,
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var runButton: UIButton!
     
-    @IBAction func runButtonPressed(sender: AnyObject) {
+    @IBAction func runButtonPressed(sender: UIButton) {
         debugPrint("run button pressed...")
+        if let detail = detailItem {
+            program = (detail as! StructContainer<GeneralProgram>).contained
+            DataManager.instance.selectedProgram = program
+        }
         tabBarController?.selectedIndex = 0
     }
     
@@ -58,7 +62,7 @@ class ProgramDetailViewController: UIViewController,
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
+        if let detail = detailItem {
             program = (detail as! StructContainer<GeneralProgram>).contained
             
             if let myLabel = nameLabel {

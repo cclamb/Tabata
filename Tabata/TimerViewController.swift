@@ -68,9 +68,20 @@ class TimerViewController: UIViewController {
         startButton.layer.cornerRadius = 5
         stopButton.layer.cornerRadius = 5
         resetButton.layer.cornerRadius = 5
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let myProgram = DataManager.instance.selectedProgram {
+            program = myProgram
+        }
         let startingInterval = program.program[0].interval
+        updateLabels(program)
         updateTimeLabels(startingInterval)
+    }
+    
+    private func updateLabels(program: TimerProgram<GeneralInterval>) {
+        programNameLabel.text = program.name
+        intervalNameLabel.text = program.program[0].description
     }
 
     override func didReceiveMemoryWarning() {
@@ -132,6 +143,7 @@ class TimerViewController: UIViewController {
         currentTimer = timerManager.createTimer(program)
         currentTimer?.addObserver("currentTimer", observer: self.notify)
         updateTimeLabels(program.program[0].interval)
+        intervalNameLabel.text = program.program[0].description
         isRunning = false
     }
     
@@ -156,9 +168,10 @@ class TimerViewController: UIViewController {
         }
         
         let intervals = interval
-        let minutes = 0
-        let seconds = Int(intervals) / 100
-        let milliSeconds = Int(intervals) - seconds * 100
+        let rawSeconds = Int(intervals) / 100
+        let minutes = rawSeconds / 60
+        let seconds = rawSeconds - minutes * 60
+        let milliSeconds = Int(intervals) - rawSeconds * 100
         let formattedMillis = format(milliSeconds)
         let formattedMinutes = format(minutes)
         let formattedSeconds = format(seconds)
