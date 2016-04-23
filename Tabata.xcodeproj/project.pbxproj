@@ -12,6 +12,7 @@
 		AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */; };
 		AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */; };
 		AC83FA831C9A4E1D00A5EC0C /* ProgramMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */; };
+		ACB1B6D21CC2FA0C00FD7C32 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1B6D11CC2FA0C00FD7C32 /* DataManager.swift */; };
 		ACB874491C9A35AE002FDF83 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB874481C9A35AE002FDF83 /* SplitViewController.swift */; };
 		ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE31231C95B9F100C04369 /* TimerViewManager.swift */; };
 		ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewController.swift; sourceTree = "<group>"; };
 		AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramMasterViewController.swift; sourceTree = "<group>"; };
+		ACB1B6D11CC2FA0C00FD7C32 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ACB874481C9A35AE002FDF83 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		ACBE31231C95B9F100C04369 /* TimerViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewManager.swift; sourceTree = "<group>"; };
 		ACC90E781C87AF1000A5B0F9 /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */,
+				ACB1B6D11CC2FA0C00FD7C32 /* DataManager.swift */,
 			);
 			name = ResourceManager;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */,
+				ACB1B6D21CC2FA0C00FD7C32 /* DataManager.swift in Sources */,
 				AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */,
 				AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */,
 				ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */,
