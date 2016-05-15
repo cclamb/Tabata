@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		6B985DC15E6E0320504378AA /* Pods_Tabata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B8D5261755357A6266AE50 /* Pods_Tabata.framework */; };
 		AC0C4CA81CA76083007968B4 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0C4CA71CA76082007968B4 /* TimerTests.swift */; };
+		AC5A28161CD66D9E006FC660 /* TimeEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5A28151CD66D9E006FC660 /* TimeEditController.swift */; };
 		AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */; };
 		AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */; };
 		AC83FA831C9A4E1D00A5EC0C /* ProgramMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */; };
 		ACB1B6D21CC2FA0C00FD7C32 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB1B6D11CC2FA0C00FD7C32 /* DataManager.swift */; };
 		ACB874491C9A35AE002FDF83 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB874481C9A35AE002FDF83 /* SplitViewController.swift */; };
 		ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE31231C95B9F100C04369 /* TimerViewManager.swift */; };
+		ACC2BDF21CDE51E30094E2EF /* ProgramEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC2BDF11CDE51E30094E2EF /* ProgramEditViewController.swift */; };
 		ACC90E7C1C87AF1000A5B0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */; };
 		ACC90E7E1C87AF1000A5B0F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */; };
 		ACC90E811C87AF1000A5B0F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC90E7F1C87AF1000A5B0F9 /* Main.storyboard */; };
@@ -48,12 +50,14 @@
 		A3B8D5261755357A6266AE50 /* Pods_Tabata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tabata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA436281F1AABDC5E81DDF5 /* Pods-Tabata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabata.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tabata/Pods-Tabata.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0C4CA71CA76082007968B4 /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		AC5A28151CD66D9E006FC660 /* TimeEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeEditController.swift; sourceTree = "<group>"; };
 		AC7C888C1C8F8B3A00E6422A /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		AC83FA801C9A4E1D00A5EC0C /* ProgramDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailViewController.swift; sourceTree = "<group>"; };
 		AC83FA811C9A4E1D00A5EC0C /* ProgramMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramMasterViewController.swift; sourceTree = "<group>"; };
 		ACB1B6D11CC2FA0C00FD7C32 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ACB874481C9A35AE002FDF83 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		ACBE31231C95B9F100C04369 /* TimerViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewManager.swift; sourceTree = "<group>"; };
+		ACC2BDF11CDE51E30094E2EF /* ProgramEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramEditViewController.swift; sourceTree = "<group>"; };
 		ACC90E781C87AF1000A5B0F9 /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC90E7B1C87AF1000A5B0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC90E7D1C87AF1000A5B0F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				ACC90E821C87AF1000A5B0F9 /* Tabata.xcdatamodeld */,
 				ACC90EAE1C87B3A200A5B0F9 /* TimerViewController.swift */,
 				ACB874481C9A35AE002FDF83 /* SplitViewController.swift */,
+				AC5A28151CD66D9E006FC660 /* TimeEditController.swift */,
+				ACC2BDF11CDE51E30094E2EF /* ProgramEditViewController.swift */,
 			);
 			path = Tabata;
 			sourceTree = "<group>";
@@ -374,8 +380,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5A28161CD66D9E006FC660 /* TimeEditController.swift in Sources */,
 				ACBE31241C95B9F100C04369 /* TimerViewManager.swift in Sources */,
 				ACB1B6D21CC2FA0C00FD7C32 /* DataManager.swift in Sources */,
+				ACC2BDF21CDE51E30094E2EF /* ProgramEditViewController.swift in Sources */,
 				AC83FA821C9A4E1D00A5EC0C /* ProgramDetailViewController.swift in Sources */,
 				AC7C888D1C8F8B3A00E6422A /* TimerManager.swift in Sources */,
 				ACC90EAF1C87B3A200A5B0F9 /* TimerViewController.swift in Sources */,
