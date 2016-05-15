@@ -50,11 +50,17 @@ public class TimerManager<K: Hashable, S: Event>: Control {
     }
     
     public func start() {
-        timers.forEach {(var control: Control) in control.start() }
+        timers.forEach {(let control: Control) in
+            var myCtrl = control
+            myCtrl.start()
+        }
     }
     
     public func stop() {
-        timers.forEach {(var control: Control) in control.stop() }
+        timers.forEach {(let control: Control) in
+            var myCtrl = control
+            myCtrl.stop()
+        }
     }
     
     public func reset() {
