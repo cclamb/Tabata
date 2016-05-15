@@ -100,8 +100,6 @@ class ProgramDetailViewController: UIViewController,
                     reuseIdentifier: "cell")
             }
             
-            cell?.accessoryType = .DisclosureIndicator
-            
             let idx = indexPath.row
             cell?.textLabel?.text = "\(     fieldTitles[idx])"
             cell?.detailTextLabel?.text = "\(Int(values[idx])) \(suffix[idx])"
@@ -120,6 +118,14 @@ class ProgramDetailViewController: UIViewController,
         numberOfRowsInSection section: Int
         ) -> Int {
             return 3
+    }
+    
+    @IBAction func cancelToProgramDetailViewController(segue:UIStoryboardSegue) {
+        debugPrint("Cancel...")
+    }
+    
+    @IBAction func saveProgramDetail(segue:UIStoryboardSegue) {
+        debugPrint("save...")
     }
 
 }
