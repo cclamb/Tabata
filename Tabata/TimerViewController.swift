@@ -50,7 +50,7 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var millisecondLabel: UILabel!
+    //@IBOutlet weak var millisecondLabel: UILabel!
     @IBOutlet weak var programNameLabel: UILabel!
     @IBOutlet weak var intervalNameLabel: UILabel!
    
@@ -171,16 +171,16 @@ class TimerViewController: UIViewController {
         let rawSeconds = Int(intervals) / 100
         let minutes = rawSeconds / 60
         let seconds = rawSeconds - minutes * 60
-        let milliSeconds = Int(intervals) - rawSeconds * 100
-        let formattedMillis = format(milliSeconds)
+        //let milliSeconds = Int(intervals) - rawSeconds * 100
+        //let formattedMillis = format(milliSeconds)
         let formattedMinutes = format(minutes)
         let formattedSeconds = format(seconds)
         let time = "\(formattedMinutes):\(formattedSeconds)"
-        let millisecondTime = "\(formattedMillis)"
+        //let millisecondTime = "\(formattedMillis)"
         //debugPrint(" \(time):\(millisecondTime) ")
         debugPrint("\(interval)")
         timeLabel!.text = time
-        millisecondLabel.text = millisecondTime
+        //millisecondLabel.text = millisecondTime
     }
     
 
