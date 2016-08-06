@@ -98,9 +98,12 @@ class TimerViewController: UIViewController {
     @IBAction func startButtonPressed(sender: UIButton) {
         if isRunning == false {
             programNameLabel.text = program.name
+            startButton.enabled = false
+            stopButton.enabled = true
+            resetButton.enabled = true
             UIView.animateWithDuration(AnimationDuration) {
-                self.startButton.backgroundColor = UIColor.greenColor()
-                self.startButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                self.startButton.backgroundColor = self.ironColor
+                self.startButton.setTitleColor(self.tintColor, forState: .Normal)
                 self.stopButton.backgroundColor = UIColor.redColor()
                 self.stopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
                 self.resetButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
@@ -118,10 +121,13 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func stopButtonPressed(sender: UIButton) {
+        startButton.enabled = true
+        stopButton.enabled = false
+        resetButton.enabled = true
         if isRunning == true {
             UIView.animateWithDuration(AnimationDuration) {
-                self.startButton.backgroundColor = self.ironColor
-                self.startButton.setTitleColor(self.tintColor, forState: .Normal)
+                self.startButton.backgroundColor = UIColor.greenColor()
+                self.startButton.setTitleColor(self.ironColor, forState: .Normal)
                 self.stopButton.backgroundColor = self.ironColor
                 self.stopButton.setTitleColor(self.tintColor, forState: .Normal)
             }
@@ -131,9 +137,12 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func resetButtonPressed(sender: UIButton) {
+        startButton.enabled = true
+        stopButton.enabled = true
+        resetButton.enabled = true
         UIView.animateWithDuration(AnimationDuration) {
-            self.startButton.backgroundColor = self.ironColor
-            self.startButton.setTitleColor(self.tintColor, forState: .Normal)
+            self.startButton.backgroundColor = UIColor.greenColor()
+            self.startButton.setTitleColor(self.ironColor, forState: .Normal)
             self.stopButton.backgroundColor = self.ironColor
             self.stopButton.setTitleColor(self.tintColor, forState: .Normal)
             self.resetButton.setTitleColor(self.tintColor, forState: .Normal)

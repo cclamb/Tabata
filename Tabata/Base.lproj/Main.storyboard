@@ -23,9 +23,11 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw5-Sf-G8w">
                                         <rect key="frame" x="0.0" y="0.0" width="173" height="38"/>
-                                        <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                        <state key="normal" title="start"/>
+                                        <state key="normal" title="start">
+                                            <color key="titleColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="startButtonPressed:" destination="Fov-sH-bsw" eventType="touchUpInside" id="lQb-SY-IBW"/>
                                         </connections>
@@ -386,7 +388,7 @@
                                 <segue destination="bmH-Qy-GPt" kind="unwind" unwindAction="cancelToProgramDetailViewController:" id="4yU-7z-XRS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Aqf-i9-8b3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Aqf-i9-8b3">
                             <connections>
                                 <segue destination="bmH-Qy-GPt" kind="unwind" unwindAction="saveProgramDetail:" id="dKR-ry-WaJ"/>
                             </connections>
